@@ -1,0 +1,34 @@
+@import "./../../Shared/Scss-snippets.scss";
+.home-component {
+    .base {
+        height: 100vh;
+        position: sticky;
+        bottom: 0;
+        // @include flex-box(center, center);
+    }
+    .inner {
+        height: 90%;
+        width: 90%;
+        border: 4px solid #fff;
+    }
+    .welcome-section {
+        background-color: teal;
+        z-index: 9;
+    }
+    .intro-section {
+        background-color: tomato;
+        z-index: 7;
+    }
+    .project-section {
+        background-color: palevioletred;
+        z-index: 5;
+    }
+    .education-section {
+        background-color: yellowgreen;
+        z-index: 3;
+    }
+    .outro-section {
+        background-color: lavenderblush;
+        z-index: 1;
+    }
+}
