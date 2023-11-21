@@ -68,3 +68,44 @@
 }
 #outro {
 }
+.position {
+  height: 100vh;
+  position: sticky;
+  bottom: 0;
+}
+.one {
+  background-color: teal;
+  z-index: 7;
+  .inner {
+    height: 80vh;
+    width: 90%;
+    border: 5px solid black;
+  }
+}
+.two {
+  background-color: tomato;
+  z-index: 5;
+  .inner {
+    height: 80vh;
+    width: 90%;
+    border: 5px solid black;
+  }
+}
+.three {
+  background-color: palevioletred;
+  z-index: 3;
+  .inner {
+    height: 80vh;
+    width: 90%;
+    border: 5px solid black;
+  }
+}
+.four {
+  background-color: yellowgreen;
+  z-index: 1;
+  .inner {
+    height: 80vh;
+    width: 90%;
+    border: 5px solid black;
+  }
+}
