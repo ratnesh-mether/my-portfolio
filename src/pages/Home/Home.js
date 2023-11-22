@@ -3,6 +3,7 @@ import React from "react";
 
 function Home() {
     return <main className="home-component">
+        <div className="scroll-helper" id="home"></div>
         <section className="base welcome-section">
             <div className="inner">
                 <h1>Welcome</h1>
@@ -11,7 +12,8 @@ function Home() {
     Intro text for visitor and popup to take the name
     */}
         </section>
-        <section className="base intro-section" id="section1">
+        <div className="scroll-helper" id="about"></div>
+        <section className="base intro-section" >
             <div className="inner">
                 <h1>Intro</h1>
             </div>
@@ -19,23 +21,31 @@ function Home() {
         photo / intro text / CTA - Email, Resume / Skills
         */}
         </section>
+        <div className="scroll-helper" id="projects"></div>
         <section className="base project-section">
             <div className="inner">
                 <h1>Projects</h1>
             </div>
 
         </section>
+        <div className="scroll-helper" id="education"></div>
         <section className="base education-section">
             <div className="inner">
                 <h1>Education</h1>
             </div>
-
+            <div className="scroll-helper"></div>
+        </section>
+        <div className="scroll-helper" id="contact"></div>
+        <section className="base contact-section">
+            <div className="inner">
+                <h1>Contact</h1>
+            </div>
+            <div className="scroll-helper"></div>
         </section>
         <section className="base outro-section">
             <div className="inner">
                 <h1>Outro</h1>
             </div>
-
         </section>
     </main>;
 }

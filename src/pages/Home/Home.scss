@@ -5,26 +5,36 @@
         position: sticky;
         bottom: 0;
         // @include flex-box(center, center);
+        box-sizing: border-box;
+        padding: 64px;
     }
     .inner {
-        height: 90%;
-        width: 90%;
+        height: 100%;
+        width: 100%;
         border: 4px solid #fff;
+    }
+    .scroll-helper {
+        // position: relative;
+        // top: -56px;
     }
     .welcome-section {
         background-color: teal;
-        z-index: 9;
+        z-index: 11;
     }
     .intro-section {
         background-color: tomato;
-        z-index: 7;
+        z-index: 9;
     }
     .project-section {
         background-color: palevioletred;
-        z-index: 5;
+        z-index: 7;
     }
     .education-section {
         background-color: yellowgreen;
+        z-index: 5;
+    }
+    .contact-section {
+        background-color: goldenrod;
         z-index: 3;
     }
     .outro-section {
