@@ -1,13 +1,19 @@
 @import "./../../Shared/Scss-snippets.scss";
 header {
-    @include flex-box(center, space-between);
-    position: sticky;
+    @include flex-box(center, center);
+    position: fixed;
+    box-sizing: border-box;
     top: 0;
+    left: 3%;
     z-index: 999;
-    height: 48px;
-    background-color: #000;
-    color: #fff;
+    height: 56px;
+    width: 94%;
+    // background-color: rgba(255, 255, 255, 255);
+    background-color: transparent;
+    // backdrop-filter: blur(100px);
+    // color: ;
     padding: 8px 24px;
+    // border-bottom: 2px solid #fff;
     .logo {
         @include flex-box(center, center);
         border: 2px solid #fff;
@@ -17,11 +23,16 @@ header {
     }
     .page-navigator {
         @include flex-box(center, center);
-        column-gap: 24px;
+        column-gap: 32px;
         font-size: 14px;
         text-transform: uppercase;
     }
     .page-type {
         cursor: pointer;
+        a {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1.3px;
+        }
     }
 }

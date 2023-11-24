@@ -1,3 +1,4 @@
+import Welcome from '../../components/Welcome/Welcome';
 import './Home.scss'
 import React from "react";
 
@@ -5,9 +6,7 @@ function Home() {
     return <main className="home-component">
         <div className="scroll-helper" id="home"></div>
         <section className="base welcome-section">
-            <div className="inner">
-                <h1>Welcome</h1>
-            </div>
+            <Welcome></Welcome>
             {/* 
     Intro text for visitor and popup to take the name
     */}

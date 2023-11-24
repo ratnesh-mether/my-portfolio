@@ -7,6 +7,8 @@
         // @include flex-box(center, center);
         box-sizing: border-box;
         padding: 64px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
     }
     .inner {
         height: 100%;
@@ -18,8 +20,9 @@
         // top: -56px;
     }
     .welcome-section {
-        background-color: teal;
+        background-color: #e7e6fc; //
         z-index: 11;
+        @include flex-box(center, center);
     }
     .intro-section {
         background-color: tomato;
