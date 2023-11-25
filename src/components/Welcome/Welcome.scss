@@ -1,13 +1,9 @@
+@import "./../../Shared/Scss-snippets.scss";
 .welcome-component {
     .name {
-        font-size: 40px;
-        font-weight: 600;
-        letter-spacing: 1.5px;
+        @include font-style(40px, 600, normal, 1.5px, $color-dark-one);
     }
     .text {
-        font-size: 40px;
-        font-weight: 500;
-        letter-spacing: 1.5px;
-        line-height: 72px;
+        @include font-style(40px, 500, 72px, 1.5px, $color-dark-one);
     }
 }

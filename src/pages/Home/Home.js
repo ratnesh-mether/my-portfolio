@@ -7,6 +7,7 @@ function Home() {
         <div className="scroll-helper" id="home"></div>
         <section className="base welcome-section">
             <Welcome></Welcome>
+
             {/* 
     Intro text for visitor and popup to take the name
     */}
