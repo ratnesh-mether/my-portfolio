@@ -24,9 +24,16 @@
         z-index: 11;
         @include flex-box(center, center);
     }
-    .intro-section {
-        background-color: tomato;
+    .about-section {
+        background-color: #f5f9ee;
         z-index: 9;
+        /**
+            Shortlisted colours:
+            
+            2. #d5def5;
+            3. #d3d6db; *
+            4. #f5f9ee **
+        */
     }
     .project-section {
         background-color: palevioletred;

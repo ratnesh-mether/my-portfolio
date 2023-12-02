@@ -1,3 +1,4 @@
+import About from '../../components/About/About';
 import Welcome from '../../components/Welcome/Welcome';
 import './Home.scss'
 import React from "react";
@@ -13,10 +14,8 @@ function Home() {
     */}
         </section>
         <div className="scroll-helper" id="about"></div>
-        <section className="base intro-section" >
-            <div className="inner">
-                <h1>Intro</h1>
-            </div>
+        <section className="base about-section" >
+            <About />
             {/* 
         photo / intro text / CTA - Email, Resume / Skills
         */}
