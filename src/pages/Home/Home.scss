@@ -10,22 +10,13 @@
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
             rgba(0, 0, 0, 0.23) 0px 3px 6px;
     }
-    .inner {
-        height: 100%;
-        width: 100%;
-        border: 4px solid #fff;
-    }
-    .scroll-helper {
-        // position: relative;
-        // top: -56px;
-    }
     .welcome-section {
-        background-color: #89c4ff; //#e7e6fc; //
+        background-color: #edf2fb; // #89c4ff; //#e7e6fc; //
         z-index: 11;
         @include flex-box(center, center);
     }
     .about-section {
-        background-color: #f5f9ee;
+        background-color: #e2eafc;
         z-index: 9;
         /**
             Shortlisted colours:
@@ -36,19 +27,19 @@
         */
     }
     .project-section {
-        background-color: palevioletred;
+        background-color: #d7e3fc;
         z-index: 7;
     }
     .education-section {
-        background-color: yellowgreen;
+        background-color: #ccdbfd;
         z-index: 5;
     }
     .contact-section {
-        background-color: goldenrod;
+        background-color: #c1d3fe;
         z-index: 3;
     }
     .outro-section {
-        background-color: lavenderblush;
+        background-color: #b6ccfe;
         z-index: 1;
     }
 }
