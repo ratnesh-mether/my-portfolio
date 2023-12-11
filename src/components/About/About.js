@@ -1,5 +1,5 @@
 import './../About/About.scss';
-import profile_picture from './../../assets/profile-pic.png';
+import profile_picture from '/Users/ratnesh/React Projects/my-portfolio/src/assets/profile_portfolio.PNG';
 
 function About() {
     return <main className='about-component'>
