@@ -3,7 +3,7 @@ import resume from '/Users/ratnesh/React Projects/my-portfolio/src/assets/Fronte
 
 function PdfViewer() {
     return (
-        <iframe src={resume} width="100%" height="500px" title="resume" />
+        <iframe src={resume} width="100%" height="100%" title="resume" />
     );
 }
 

@@ -1,10 +1,28 @@
+import { useDispatch, useSelector } from 'react-redux';
 import About from '../../components/About/About';
 import Welcome from '../../components/Welcome/Welcome';
 import './Home.scss'
-import React from "react";
+import React, { useState } from "react";
+import { setPdfViewerFlag } from '../../Redux-State/slice';
+import PdfViewer from '../../components/Pdf-viewer/Pdf-viewer';
 
 function Home() {
+    const dispatch = useDispatch();
+    const pdfViewerFlag = useSelector(state => state.slice.pdfViewerFlag)
+    const dispatchHandler = () => {
+
+        dispatch(setPdfViewerFlag(false))
+    }
     return <main className="home-component">
+        {
+            pdfViewerFlag ?
+                <div className="pdf-viewer-container">
+                    <div className='close-button' onClick={dispatchHandler}>
+                        <p>Close Preview </p>
+                    </div>
+                    <PdfViewer />
+                </div>
+                : ''}
         <div className="scroll-helper" id="home"></div>
         <section className="base welcome-section">
             <Welcome></Welcome>
