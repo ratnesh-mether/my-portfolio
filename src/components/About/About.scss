@@ -16,4 +16,11 @@
             // background-color: yellow;
         }
     }
+    .pdf-viewer-container {
+        position: fixed;
+        top: 0;
+        width: 100px;
+        height: 100vh;
+        background-color: red;
+    }
 }
