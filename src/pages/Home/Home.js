@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import About from '../../components/About/About';
 import Welcome from '../../components/Welcome/Welcome';
 import './Home.scss'
-import React, { useState } from "react";
+import React from "react";
 import { setPdfViewerFlag } from '../../Redux-State/slice';
 import PdfViewer from '../../components/Pdf-viewer/Pdf-viewer';
 
@@ -10,7 +10,6 @@ function Home() {
     const dispatch = useDispatch();
     const pdfViewerFlag = useSelector(state => state.slice.pdfViewerFlag)
     const dispatchHandler = () => {
-
         dispatch(setPdfViewerFlag(false))
     }
     return <main className="home-component">
@@ -35,7 +34,7 @@ function Home() {
         <section className="base about-section" >
             <About />
             {/* 
-        photo / intro text / CTA - Email, Resume / Skills
+        photo / intro text / CTA - Email, Resume / Skills / LinkedIn / Twitter
         */}
         </section>
         <div className="scroll-helper" id="projects"></div>
