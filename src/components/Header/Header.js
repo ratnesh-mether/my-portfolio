@@ -1,10 +1,10 @@
 import React from "react";
-import "./Header.scss"
+import "./Header.scss";
 function Header() {
     return <>
         <header>
             {/* <div className="logo">
-                <p>RM</p>
+                <img src={logo} alt="Logo" />
             </div> */}
             <div className="page-navigator">
                 <div className="page-type">
