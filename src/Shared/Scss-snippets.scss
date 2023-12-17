@@ -1,9 +1,10 @@
 $color-dark-one: #2f2342;
 
-@mixin flex-box($alignItem, $justifyContent) {
+@mixin flex-box($alignItem, $justifyContent, $flexDirection) {
     display: flex;
     align-items: $alignItem;
     justify-content: $justifyContent;
+    flex-direction: $flexDirection;
 }
 
 @mixin font-style($size, $weight, $height, $spacing, $color) {

@@ -1,6 +1,6 @@
 @import "./../../Shared/Scss-snippets.scss";
 header {
-    @include flex-box(center, center);
+    @include flex-box(center, center, row);
     position: fixed;
     box-sizing: border-box;
     top: 1%;
@@ -14,14 +14,14 @@ header {
     padding: 8px 24px;
     // border-bottom: 2px solid #fff;
     .logo {
-        @include flex-box(center, center);
+        @include flex-box(center, center, row);
         border: 2px solid #fff;
         border-radius: 50%;
         height: 35px;
         width: 35px;
     }
     .page-navigator {
-        @include flex-box(center, center);
+        @include flex-box(center, center, row);
         column-gap: 32px;
         font-size: 14px;
         text-transform: uppercase;

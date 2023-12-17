@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './../About/About.scss';
 import { setPdfViewerFlag } from '../../redux-state/slice';
 import { useRef } from 'react';
-import { EMAIL_DATA, PHONE_NUMBER, RESUME_PATH } from '../../utilities/Constants';
+import { EMAIL_DATA, INTRODUCTION_PARA_1, INTRODUCTION_PARA_2, INTRODUCTION_PARA_3, PHONE_NUMBER, RESUME_PATH } from '../../utilities/Constants';
 function About() {
     const pdfDownloadRef = useRef(null);
     const dispatch = useDispatch();
@@ -24,19 +24,23 @@ function About() {
         window.open(mailtoLink, '_blank');
     };
     return <main className='about-component'>
-        <h1>ABOUT</h1>
-        <div className="profile-image-container">
+        <div className="intro-section">
+            <div className="profile-image-container">
+            </div>
+            <div className="intro-text-links">
+                <div className="text">
+                    <p>{INTRODUCTION_PARA_1}</p>
+                    <p>{INTRODUCTION_PARA_2}</p>
+                    <p>{INTRODUCTION_PARA_3}</p>
+                </div>
+                <div className="links">
+                    <button onClick={dispatchHandler}>Action</button>
+                    <a href={RESUME_PATH} ref={pdfDownloadRef} className="pdf-link" download="Frontend-Developer-Ratnesh-Mether.pdf">Resume</a>
+                    <button onClick={composeEmail}> Compose Email </button>
+                    <button onClick={handleCall}> Call Me </button>
+                </div>
+            </div>
         </div>
-        {/* <p>{introduction}</p> */}
-        <h1>{"" + pdfViewerFlag}</h1>
-        <button onClick={dispatchHandler}>Action</button>
-        <a href={RESUME_PATH} ref={pdfDownloadRef} className="pdf-link" download="Frontend-Developer-Ratnesh-Mether.pdf">Resume</a>
-        <button onClick={composeEmail}>
-            Compose Email
-        </button>
-        <button onClick={handleCall}>
-            Call Me
-        </button>
     </main>
 }
 
