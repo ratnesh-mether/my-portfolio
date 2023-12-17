@@ -3,7 +3,7 @@ import About from '../../components/About/About';
 import Welcome from '../../components/Welcome/Welcome';
 import './Home.scss'
 import React from "react";
-import { setPdfViewerFlag } from '../../Redux-State/slice';
+import { setPdfViewerFlag } from '../../redux-state/slice';
 import PdfViewer from '../../components/Pdf-viewer/Pdf-viewer';
 
 function Home() {
@@ -12,16 +12,18 @@ function Home() {
     const dispatchHandler = () => {
         dispatch(setPdfViewerFlag(false))
     }
-    return <main className="home-component">
-        {
-            pdfViewerFlag ?
-                <div className="pdf-viewer-container">
-                    <div className='close-button' onClick={dispatchHandler}>
-                        <p>Close Preview </p>
-                    </div>
-                    <PdfViewer />
+    const handlePDFView = () => {
+        if (pdfViewerFlag) {
+            return <div className="pdf-viewer-container">
+                <div className='close-button' onClick={dispatchHandler}>
+                    <p>Close Preview </p>
                 </div>
-                : ''}
+                <PdfViewer />
+            </div>
+        }
+    }
+    return <main className="home-component">
+        {handlePDFView()}
         <div className="scroll-helper" id="home"></div>
         <section className="base welcome-section">
             <Welcome></Welcome>

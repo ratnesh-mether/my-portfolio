@@ -1,7 +1,6 @@
 import './App.scss';
-import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
-
+import Header from './components/Header/Header';
 function App() {
   return (
     <>

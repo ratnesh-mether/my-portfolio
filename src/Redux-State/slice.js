@@ -8,7 +8,6 @@ export const slice = createSlice({
     initialState,
     reducers: {
         setPdfViewerFlag: (state, action) => {
-            console.log(state)
             state.pdfViewerFlag = action.payload;
         }
     },
