@@ -1,10 +1,24 @@
 import resume from '/Users/ratnesh/React Projects/my-portfolio/src/assets/Frontend.pdf';
+import react from './../assets/react.svg';
+import javascript from './../assets/javascript.svg';
+import html from './../assets/html.svg';
+import css from './../assets/css.svg';
+import angular from './../assets/angular.svg';
+import github from './../assets/github.svg';
+import docker from './../assets/docker.svg';
+import postman from './../assets/postman.svg';
+import bootstrap from './../assets/bootstrap.svg';
+import jira from './../assets/jira.svg';
 
 export const PHONE_NUMBER = '9922040096';
 
 export const PDF_WORKER_URL = "https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js";
 
 export const RESUME_PATH = resume;
+
+export const SKILLS = {
+    react, javascript, html, css, angular, github, docker, postman, bootstrap, jira
+}
 
 export const INTRODUCTION_PARA_1 = `Hey there, I'm Ratnesh Mether, 
 a passionate enthusiast in the world of Frontend development and crafting user-friendly interfaces.        

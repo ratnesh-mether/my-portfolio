@@ -3,7 +3,7 @@ header {
     @include flex-box(center, center, row);
     position: fixed;
     box-sizing: border-box;
-    top: 1%;
+    top: 0;
     z-index: 999;
     height: 56px;
     width: 100%;
@@ -12,7 +12,8 @@ header {
     // backdrop-filter: blur(100px);
     // color: ;
     padding: 8px 24px;
-    // border-bottom: 2px solid #fff;
+    border-bottom: 1px solid;
+    background-color: #fff;
     .logo {
         @include flex-box(center, center, row);
         border: 2px solid #fff;
