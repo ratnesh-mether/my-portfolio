@@ -1,7 +1,7 @@
 @import "./../../Shared/Scss-snippets.scss";
 header {
     @include flex-box(center, center, row);
-    position: fixed;
+    position: sticky;
     box-sizing: border-box;
     top: 0;
     z-index: 999;
