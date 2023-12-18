@@ -29,10 +29,16 @@ export const PROJECTS = {
     solar, electrum, injection, sirius, controlCenter
 }
 
+export const PROJECTS_URLS = {
+    solar: 'https://www.solar.com/',
+    injection: 'https://codebase2-prelive.pickmysolar.com/',
+    sirius: 'https://www.solar.com/solar-reviews/',
+    electrum: 'https://www.electrum.co/'
+}
 export const INTRODUCTION_PARA_1 = `Hey there, I'm Ratnesh Mether, 
 a passionate enthusiast in the world of Frontend development and crafting user-friendly interfaces.        
 My journey took root at Fergusson College, Pune, 
-where I earned my master's degree. That's where my love affair with the world of tech really took flight, 
+where I earned my master's degree. That's where my interest in  the world of tech really took flight, 
 and since then, I've been hooked on learning and exploring the ever-evolving landscape of web development.`
 
 export const INTRODUCTION_PARA_2 = `Apart from coding, I'm probably diving into the latest tech blogs, 

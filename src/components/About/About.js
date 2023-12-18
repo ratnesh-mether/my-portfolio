@@ -40,8 +40,8 @@ function About() {
                 </div>
                 <div className="links">
                     <button onClick={dispatchHandler}>View Resume</button>
-                    <button onClick={composeEmail}> Email Me </button>
-                    <button onClick={handleCall}> Call Me </button>
+                    <button onClick={composeEmail}> Email </button>
+                    <button onClick={handleCall}> Call</button>
                     <a href={RESUME_PATH} ref={pdfDownloadRef} className="pdf-link" download="Frontend-Developer-Ratnesh-Mether.pdf">Resume</a>
                 </div>
             </div>
