@@ -5,6 +5,7 @@ import './Home.scss'
 import React from "react";
 import { setPdfViewerFlag } from '../../redux-state/slice';
 import PdfViewer from '../../components/Pdf-viewer/Pdf-viewer';
+import Projects from '../../components/Projects/Projects';
 
 function Home() {
     const dispatch = useDispatch();
@@ -43,6 +44,7 @@ function Home() {
         <section className="base project-section">
             <div className="inner">
                 <h1>Projects</h1>
+                <Projects />
             </div>
 
         </section>
