@@ -25,16 +25,57 @@ export const SKILLS = {
     react, javascript, html, css, angular, github, docker, postman, bootstrap, jira
 }
 
-export const PROJECTS = {
-    solar, electrum, injection, sirius, controlCenter
-}
+export const PROJECTS_DATA = [
+    {
+        title: 'User Review Web App (Project Sirius)',
+        url: 'https://www.solar.com/solar-reviews/',
+        image: sirius,
+        points: [
+            ' Project Sirius is a platform that empowers users with valuable insights to support informed purchasing decisions.',
+            'Independently directed a significant portion encompassing more than 3 modules, namely profiles, reviews, and listings.',
+            'Resulted 300+ installer reviews within a month period.'
+        ]
+    },
+    {
+        title: 'Dependency Injection Web App (Injection)',
+        url: 'https://codebase2-prelive.pickmysolar.com/',
+        image: injection,
+        points: [
+            'Injection is a configurable web application for seamless third-party platform integration.',
+            'Configured diverse configurations to provide customised experiences based on partner requirements.',
+            'Implemented more than 3 product flows to analyse user behaviour using LaunchDarkly.'
+        ]
+    },
+    {
+        title: 'E-Commerce Web App (Electrum.co)',
+        url: 'https://www.electrum.co/',
+        image: electrum,
+        points: [
+            'Electrum and Solar are web apps focusing on products namely solar panels, batteries, water heaters, and EV chargers.',
+            'Developed a user-friendly, multi-step dashboard with flow emphasising attributes such as location, product details and utility information.',
+            'Enhanced website loading speed by 40% and implemented SEO optimisations.'
+        ]
+    },
+    {
+        title: 'Admin Dashboard (Control Center)',
+        url: 'https://controlcenter-v1.solar.com/',
+        image: controlCenter,
+        points: [
+            'Control Center is Electrum\'s internal operational dashboard, facilitating efficient management of all business activities.'
+        ]
+    },
+    {
+        title: 'E-Commerce Web App (Solar.com)',
+        url: 'https://www.solar.com/',
+        image: solar,
+        points: [
+            'Electrum and Solar are web apps focusing on products namely solar panels, batteries, water heaters, and EV chargers.',
+            'Developed a user-friendly, multi-step dashboard with flow emphasising attributes such as location, product details and utility information.',
+            'Enhanced website loading speed by 40% and implemented SEO optimisations.'
+        ]
+    }
+]
 
-export const PROJECTS_URLS = {
-    solar: 'https://www.solar.com/',
-    injection: 'https://codebase2-prelive.pickmysolar.com/',
-    sirius: 'https://www.solar.com/solar-reviews/',
-    electrum: 'https://www.electrum.co/'
-}
 export const INTRODUCTION_PARA_1 = `Hey there, I'm Ratnesh Mether, 
 a passionate enthusiast in the world of Frontend development and crafting user-friendly interfaces.        
 My journey took root at Fergusson College, Pune, 
