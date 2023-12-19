@@ -15,5 +15,15 @@
     max-width: 1440px;
     position: relative;
     margin: auto;
-    padding: 0 64px;
+    padding: 0 32px;
+}
+@media (width <= 1280px) {
+    .app-component {
+        padding: 0 24px;
+    }
+}
+@media (width <= 640px) {
+    .app-component {
+        padding: 0 16px;
+    }
 }

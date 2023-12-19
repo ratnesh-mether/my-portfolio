@@ -35,7 +35,7 @@ function Home() {
         {/* </section> */}
         {/* <div className="scroll-helper" id="about" ></div> */}
         <section className="base about-section" >
-            <About />
+            {/* <About /> */}
             {/* 
         photo / intro text / CTA - Email, Resume / Skills / LinkedIn / Twitter
         */}

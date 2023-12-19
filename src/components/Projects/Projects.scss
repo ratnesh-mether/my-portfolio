@@ -15,13 +15,15 @@
         background-color: #f3fdf9;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
             0px 0px 5px -2px rgb(0, 0, 0);
-        column-gap: 32px;
+        // column-gap: 32px;
         .info-text {
             @include flex-box(center, normal, row);
             ul {
                 @include flex-box(center, normal, column);
-                row-gap: 16px;
+                row-gap: 8px;
                 line-height: 32px;
+                // padding: 0;
+                margin: 0;
                 li {
                     align-self: self-start;
                 }
@@ -35,6 +37,7 @@
         .project {
             flex-direction: row-reverse;
             background-color: #f9edf9;
+            column-gap: 32px;
         }
     }
     .image-container {
@@ -48,5 +51,54 @@
             width: 100%;
             height: 100%;
         }
+    }
+}
+@media (width <= 1280px) {
+    .projects-component {
+        .project {
+            flex-direction: column;
+            padding: 24px;
+            row-gap: 24px;
+            .info-text {
+                ul {
+                    padding: 0 0 0 14px;
+                }
+            }
+        }
+        .image-container {
+            margin: auto;
+            box-shadow: 0px 1px 1px rgba(0.3, 0.3, 0.3, 0.3),
+                0px 0px 0px 0px rgb(0, 0, 0);
+            border: 3px solid #fff;
+            border-radius: 4px;
+        }
+        .project-info-container:nth-of-type(2n) {
+            .project {
+                flex-direction: column;
+                padding: 24px;
+                row-gap: 24px;
+            }
+        }
+    }
+}
+@media (width <= 768px) {
+    .projects-component {
+        .project {
+            padding: 16px;
+        }
+        .project-info-container:nth-of-type(2n) {
+            .project {
+                padding: 16px;
+            }
+        }
+        .image-container {
+            min-width: unset;
+            width: 100%;
+        }
+    }
+}
+
+@media (width <= 640px) {
+    .projects-component {
     }
 }
