@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 function App() {
   return (
     <main className='app-component'>
-      {/* <Header></Header> */}
+      <Header></Header>
       <Home></Home>
       <footer></footer>
     </main>

@@ -1,6 +1,6 @@
 @import "./../../shared/Scss-snippets.scss";
 .projects-component {
-    @include flex-box(normal, normal, column);
+    @include flex-box(center, normal, column);
     row-gap: 32px;
     .project-info-container {
         @include flex-box(center, normal, column);
@@ -105,6 +105,14 @@
         row-gap: 24px;
         .project {
             padding: 8px;
+            .info-text {
+                flex-direction: column;
+                row-gap: 16px;
+            }
+            .more-container {
+                font-size: 13px;
+                color: #4062fa;
+            }
         }
         .project-info-container:nth-of-type(2n) {
             .project {

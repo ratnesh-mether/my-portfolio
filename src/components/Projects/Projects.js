@@ -8,6 +8,29 @@ function Projects() {
         const emptyArray = Array(5).fill(true);
         return emptyArray;
     });
+    const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+    useEffect(() => {
+        const updateDimension = () => {
+            setScreenSize(getCurrentDimension())
+        }
+        window.addEventListener('resize', updateDimension);
+        if (screenSize.width > 640) {
+            setLoadMorePoint(() => {
+                const emptyArray = Array(5).fill(false);
+                return emptyArray;
+            })
+        } else {
+            setLoadMorePoint(() => {
+                const emptyArray = Array(5).fill(true);
+                return emptyArray;
+            })
+        }
+        return (() => {
+            window.removeEventListener('resize', updateDimension);
+        })
+    }, [screenSize])
+
     const loadMoreHandler = () => {
         setLoadMore(!loadMore)
     }
@@ -16,9 +39,13 @@ function Projects() {
         data[index] = flag ? true : false;
         setLoadMorePoint([...data]);
     }
-    useEffect(() => {
-        console.log(loadMorePoint)
-    }, [loadMorePoint])
+    function getCurrentDimension() {
+        return {
+            width: window.innerWidth,
+            height: window.innerHeight
+        }
+    }
+
     const renderProject = (project, projectIndex) => {
         return <div className="project-info-container" key={project.title}>
             <a href={project.url} target='_blank' rel="noreferrer">
@@ -36,22 +63,31 @@ function Projects() {
                             })
                         }
                     </ul>
-                    <p onClick={() => loadMorePointHandler(false, projectIndex)}>Show More</p>
-                    <p onClick={() => loadMorePointHandler(true, projectIndex)}>Show Less</p>
+                    {
+                        screenSize.width <= 640 ?
+                            <div className="more-container">
+                                {
+                                    loadMorePoint[projectIndex] ?
+                                        <p onClick={() => loadMorePointHandler(false, projectIndex)}>Show More </p> :
+                                        <p onClick={() => loadMorePointHandler(true, projectIndex)}>Show Less</p>
+                                }
+                            </div> : ''
+                    }
+
                 </div>
             </div>
         </div>
     }
     const projectList = () => {
         return PROJECTS_DATA
-            .slice(0, loadMore ? 3 : PROJECTS_DATA.length - 1)
+            .slice(0, loadMore ? 3 : PROJECTS_DATA.length)
             .map((project, index) => {
                 return renderProject(project, index);
             })
     }
     return <main className='projects-component'>
         {projectList()}
-        {loadMore ? <p onClick={loadMoreHandler}>Show More</p> : <p onClick={loadMoreHandler}>Show Less</p>}
+        {loadMore ? <p onClick={loadMoreHandler}>Show More Projects</p> : <p onClick={loadMoreHandler}>Show Less Projects</p>}
     </main>;
 }
 export default Projects;
