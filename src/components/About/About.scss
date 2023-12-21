@@ -247,16 +247,3 @@
         }
     }
 }
-
-@media (width <= 360px) {
-    .about-component {
-        .profile-image-container {
-            width: 250px;
-            height: 250px;
-            background-size: auto 21em;
-        }
-        .intro-text-links {
-            margin-top: 4em;
-        }
-    }
-}

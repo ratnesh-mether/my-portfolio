@@ -14,7 +14,11 @@ import electrum from './../assets/projects/electrum.webp';
 import injection from './../assets/projects/injection.webp';
 import sirius from './../assets/projects/sirius.webp';
 import controlCenter from './../assets/projects/control-center.jpeg';
-import profilePicture from './../assets/profile_portfolio.png'
+import profilePicture from './../assets/profile_portfolio.png';
+import linkedin from './../assets/social/linkedin-logo.svg';
+import github_logo from './../assets/social/github-logo.svg';
+import stackoverflow from './../assets/social/stackoverflow.svg';
+import twitter from './../assets/social/twitter.svg';
 
 export const PHONE_NUMBER = '9922040096';
 
@@ -24,6 +28,11 @@ export const RESUME_PATH = resume;
 
 export const PROFILE_PICTURE = profilePicture
 
+export const SOCIAL_LINKS = [
+    { url: 'https://www.linkedin.com/in/ratnesh-mether', logo: linkedin, title: 'linkedin' },
+    { url: 'https://github.com/ratnesh-mether', logo: github_logo, title: 'githublogo' },
+    { url: 'https://stackoverflow.com/users/22933238/ratnesh-mether', logo: stackoverflow, title: 'stackoverflow' },
+    { url: 'https://twitter.com/ratnesh_mether', logo: twitter, title: 'twitter' }];
 export const SKILLS = {
     react: {
         name: 'React',

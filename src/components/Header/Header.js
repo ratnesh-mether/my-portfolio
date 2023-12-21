@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 function Header() {
+    const [breadcrumbFlag, setBreadcrumbFlag] = useState(false);
+    const breadcrumbHandler = () => {
+        setBreadcrumbFlag(!breadcrumbFlag);
+    }
     return <>
         <header>
             {/* <div className="logo">
@@ -23,7 +27,28 @@ function Header() {
                     <a className="type-text" href="#contact">Contact</a>
                 </div>
             </div>
+            <div className="breadcrumb" onClick={breadcrumbHandler} >
+                <hr />
+                <hr />
+                <hr />
+            </div>
+
         </header>
+        {
+            breadcrumbFlag ?
+                <div className="breadcrumb-menu">
+                    <p className="close" onClick={breadcrumbHandler}>x</p>
+
+                    <div className="options">
+                        <p onClick={breadcrumbHandler}>Home</p>
+                        <p onClick={breadcrumbHandler}>About</p>
+                        <p onClick={breadcrumbHandler}>Project</p>
+                        <p onClick={breadcrumbHandler}>Contact</p>
+                    </div>
+
+
+                </div>
+                : ''}
     </>
 
 }
