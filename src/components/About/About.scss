@@ -18,6 +18,9 @@
     .links {
         @include flex-box(normal, center, row);
         column-gap: 24px;
+        a {
+            position: absolute;
+        }
         button {
             align-items: center;
             appearance: none;
@@ -64,13 +67,23 @@
             box-shadow: #d6d6e7 0 3px 7px inset;
             transform: translateY(2px);
         }
+        // box-shadow: rgb(73 32 160 / 40%) 0 2px 4px, rgb(84 24 210 / 30%) 0 7px 13px -3px, #7979b6 0 -3px 0 inset;
+    }
+    .contact-button {
+        display: flex;
+        column-gap: 24px;
     }
     .skills-section {
-        @include flex-box(center, center, row);
+        @include flex-box(normal, normal, row);
+        max-width: 100%;
+        overflow: scroll;
         column-gap: 16px;
+        padding: 4px 2px 16px;
+
         .skill {
             height: 120px;
             width: 120px;
+            flex-shrink: 0;
             background: #ffffff;
             border: 0 solid #e2e8f0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -91,13 +104,16 @@
             box-sizing: border-box;
             border-radius: 8px;
         }
+        // .skill:hover {
+        //     background-color: #000;
+        // }
     }
     .profile-image-container {
         width: 500px;
         height: 500px;
         overflow: hidden;
         // border: 0.5px solid;
-        background-image: url("./../../assets/profile_portfolio.PNG");
+        background-image: url("./../../assets/profile_portfolio.png");
         border-radius: 50%;
         background-size: auto 39em;
         background-repeat: no-repeat;
@@ -115,5 +131,56 @@
     }
     .pdf-link {
         visibility: hidden;
+    }
+}
+
+@media (width <= 1280px) {
+    .about-component {
+        .intro-section {
+            flex-direction: column;
+            row-gap: 32px;
+        }
+    }
+}
+
+@media (width <= 640px) {
+    .about-component {
+        .profile-image-container {
+            width: 350px;
+            height: 350px;
+            background-size: auto 25em;
+        }
+        .links {
+            flex-direction: column-reverse;
+            row-gap: 16px;
+            width: 100%;
+            button {
+                width: 100%;
+            }
+        }
+        .contact-button {
+            display: flex;
+            column-gap: 16px;
+            width: 100%;
+            button {
+                width: 50%;
+            }
+        }
+        .skills-section {
+            .skill {
+                height: 80px;
+                width: 80px;
+            }
+        }
+    }
+}
+
+@media (width <= 360px) {
+    .about-component {
+        .profile-image-container {
+            width: 250px;
+            height: 250px;
+            background-size: auto 21em;
+        }
     }
 }

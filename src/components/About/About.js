@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './../About/About.scss';
 import { setPdfViewerFlag } from '../../redux-state/slice';
 import { useRef } from 'react';
-import { EMAIL_DATA, INTRODUCTION_PARA_1, INTRODUCTION_PARA_2, INTRODUCTION_PARA_3, PHONE_NUMBER, RESUME_PATH, SKILLS } from '../../utilities/Constants';
+import { EMAIL_DATA, INTRODUCTION_PARA_1, INTRODUCTION_PARA_2, INTRODUCTION_PARA_3, PHONE_NUMBER, PROFILE_PICTURE, RESUME_PATH, SKILLS } from '../../utilities/Constants';
 function About() {
     const pdfDownloadRef = useRef(null);
     const dispatch = useDispatch();
@@ -31,6 +31,7 @@ function About() {
     return <main className='about-component'>
         <div className="intro-section">
             <div className="profile-image-container">
+                {/* <img src={PROFILE_PICTURE} alt="Profile" /> */}
             </div>
             <div className="intro-text-links">
                 <div className="text">
@@ -40,8 +41,10 @@ function About() {
                 </div>
                 <div className="links">
                     <button onClick={dispatchHandler}>View Resume</button>
-                    <button onClick={composeEmail}> Email </button>
-                    <button onClick={handleCall}> Call</button>
+                    <div className="contact-button">
+                        <button onClick={composeEmail}> Email </button>
+                        <button onClick={handleCall}> Call</button>
+                    </div>
                     <a href={RESUME_PATH} ref={pdfDownloadRef} className="pdf-link" download="Frontend-Developer-Ratnesh-Mether.pdf">Resume</a>
                 </div>
             </div>

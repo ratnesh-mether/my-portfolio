@@ -14,12 +14,15 @@ import electrum from './../assets/projects/electrum.webp';
 import injection from './../assets/projects/injection.webp';
 import sirius from './../assets/projects/sirius.webp';
 import controlCenter from './../assets/projects/control-center.jpeg';
+import profilePicture from './../assets/profile_portfolio.png'
 
 export const PHONE_NUMBER = '9922040096';
 
 export const PDF_WORKER_URL = "https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js";
 
 export const RESUME_PATH = resume;
+
+export const PROFILE_PICTURE = profilePicture;
 
 export const SKILLS = {
     react, javascript, html, css, angular, github, docker, postman, bootstrap, jira

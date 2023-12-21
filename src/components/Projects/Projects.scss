@@ -6,7 +6,7 @@
         @include flex-box(center, normal, column);
         column-gap: 32px;
         h2 {
-            color: #4062fa;
+            color: $color-dark-two;
             margin: 0 0 16px 0;
         }
     }
@@ -23,7 +23,6 @@
                 @include flex-box(center, normal, column);
                 row-gap: 8px;
                 line-height: 32px;
-                // padding: 0;
                 margin: 0;
                 li {
                     align-self: self-start;
@@ -53,6 +52,11 @@
             width: 100%;
             height: 100%;
         }
+    }
+    .more-project {
+        color: $color-dark-two;
+        cursor: pointer;
+        font-weight: 600;
     }
 }
 @media (width <= 1280px) {
@@ -99,7 +103,6 @@
         }
     }
 }
-
 @media (width <= 640px) {
     .projects-component {
         row-gap: 24px;
@@ -111,7 +114,7 @@
             }
             .more-container {
                 font-size: 13px;
-                color: #4062fa;
+                color: $color-dark-two;
             }
         }
         .project-info-container:nth-of-type(2n) {

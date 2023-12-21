@@ -87,7 +87,9 @@ function Projects() {
     }
     return <main className='projects-component'>
         {projectList()}
-        {loadMore ? <p onClick={loadMoreHandler}>Show More Projects</p> : <p onClick={loadMoreHandler}>Show Less Projects</p>}
+        {loadMore ?
+            <p onClick={loadMoreHandler} className="more-project">Show More Projects</p> :
+            <p onClick={loadMoreHandler} className="more-project">Show Less Projects</p>}
     </main>;
 }
 export default Projects;
