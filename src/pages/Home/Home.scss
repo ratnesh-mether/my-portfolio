@@ -66,3 +66,11 @@
         // z-index: 1;
     }
 }
+
+@media (width <= 1280px) {
+    .home-component {
+        .base {
+            padding: 0 0 32px;
+        }
+    }
+}

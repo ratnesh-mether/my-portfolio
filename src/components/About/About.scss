@@ -2,6 +2,9 @@
 .about-component {
     @include flex-box(center, center, column);
     row-gap: 64px;
+    .profile-cover {
+        display: none;
+    }
     .intro-section {
         @include flex-box(center, normal, row);
         column-gap: 64px;
@@ -14,6 +17,7 @@
         @include flex-box(normal, normal, column);
         @include font-style(16px, normal, 32px, normal, $color-dark-one);
         row-gap: 16px;
+        text-align: justify;
     }
     .links {
         @include flex-box(normal, center, row);
@@ -52,6 +56,7 @@
             white-space: nowrap;
             will-change: box-shadow, transform;
             font-size: 16px;
+            cursor: pointer;
         }
         button:focus {
             box-shadow: #d6d6e7 0 0 0 1.5px inset,
@@ -90,7 +95,34 @@
                 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             box-sizing: border-box;
             border-radius: 8px;
-            padding: 16px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            .tag {
+                height: 80px;
+                width: 80px;
+                background: red;
+                transform: rotate(45deg);
+                position: absolute;
+                top: -40px;
+                left: -40px;
+                display: flex;
+                justify-content: center;
+                box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4),
+                    0px 0 4px 0px rgb(0, 0, 0);
+
+                p {
+                    transform: rotate(270deg);
+                    position: relative;
+                    bottom: -34px;
+                    left: 26px;
+                    font-size: 11.5px;
+                    height: -moz-fit-content;
+                    height: fit-content;
+                    color: #fff;
+                    font-weight: 600;
+                }
+            }
             img {
                 width: 100%;
                 height: 100%;
@@ -136,6 +168,24 @@
 
 @media (width <= 1280px) {
     .about-component {
+        row-gap: 40px;
+        .profile-cover {
+            background: black;
+            width: 100%;
+            // position: absolute;
+            height: 250px;
+            display: block;
+        }
+        .profile-image-container {
+            height: 300px;
+            width: 300px;
+            background-size: auto 25em;
+            position: absolute;
+            top: 8.5em;
+        }
+        .intro-text-links {
+            margin-top: 7em;
+        }
         .intro-section {
             flex-direction: column;
             row-gap: 32px;
@@ -145,10 +195,21 @@
 
 @media (width <= 640px) {
     .about-component {
+        .profile-cover {
+            height: 200px;
+        }
         .profile-image-container {
-            width: 350px;
-            height: 350px;
-            background-size: auto 25em;
+            height: 200px;
+            width: 200px;
+            background-size: auto 17em;
+            top: 8.5em;
+        }
+        .text {
+            font-size: 13px;
+            font-weight: normal;
+        }
+        .intro-text-links {
+            margin-top: 4em;
         }
         .links {
             flex-direction: column-reverse;
@@ -168,8 +229,20 @@
         }
         .skills-section {
             .skill {
-                height: 80px;
-                width: 80px;
+                height: 85px;
+                width: 85px;
+                padding: 16px;
+                tag {
+                    height: 80px;
+                    width: 80px;
+                    top: -40px;
+                    left: -40px;
+                    p {
+                        bottom: -25px;
+                        left: 21px;
+                        font-size: 9.5px;
+                    }
+                }
             }
         }
     }
@@ -181,6 +254,9 @@
             width: 250px;
             height: 250px;
             background-size: auto 21em;
+        }
+        .intro-text-links {
+            margin-top: 4em;
         }
     }
 }

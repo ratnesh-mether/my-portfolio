@@ -19,11 +19,13 @@
         // column-gap: 32px;
         .info-text {
             @include flex-box(center, normal, row);
+            padding-right: 24px;
             ul {
                 @include flex-box(center, normal, column);
                 row-gap: 8px;
                 line-height: 32px;
                 margin: 0;
+                text-align: justify;
                 li {
                     align-self: self-start;
                 }
@@ -38,6 +40,9 @@
             flex-direction: row-reverse;
             background-color: #f9edf9;
             column-gap: 32px;
+            .info-text {
+                padding: 0;
+            }
         }
     }
     .image-container {

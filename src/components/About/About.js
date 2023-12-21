@@ -25,11 +25,15 @@ function About() {
     const showSkills = () => {
         const skills = Object.entries(SKILLS);
         return skills.map(([key, skill]) => {
-            return <div className="skill" key={key}><img src={skill} alt="react" /></div>
+            console.log(skill)
+            return <div className="skill" key={key}><div className='tag'><p>{skill.name}</p></div><img src={skill.logo} alt="react" /></div>
         })
     }
     return <main className='about-component'>
         <div className="intro-section">
+            <div className="profile-cover">
+
+            </div>
             <div className="profile-image-container">
                 {/* <img src={PROFILE_PICTURE} alt="Profile" /> */}
             </div>

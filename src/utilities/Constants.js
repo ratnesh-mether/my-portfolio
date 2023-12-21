@@ -22,10 +22,49 @@ export const PDF_WORKER_URL = "https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.wo
 
 export const RESUME_PATH = resume;
 
-export const PROFILE_PICTURE = profilePicture;
+export const PROFILE_PICTURE = profilePicture
 
 export const SKILLS = {
-    react, javascript, html, css, angular, github, docker, postman, bootstrap, jira
+    react: {
+        name: 'React',
+        logo: react
+    },
+    javascript: {
+        name: 'JS',
+        logo: javascript
+    },
+    html: {
+        name: 'HTML',
+        logo: html,
+    },
+    css: {
+        name: 'CSS',
+        logo: css
+    },
+    angular: {
+        name: 'Angular',
+        logo: angular
+    },
+    github: {
+        name: 'GitHub',
+        logo: github
+    },
+    docker: {
+        name: 'Docker',
+        logo: docker
+    },
+    postman: {
+        name: 'Postman',
+        logo: postman
+    },
+    bootstrap: {
+        name: 'BS',
+        logo: bootstrap
+    },
+    jira: {
+        name: 'JIRA',
+        logo: jira
+    }
 }
 
 export const PROJECTS_DATA = [

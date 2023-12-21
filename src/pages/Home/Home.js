@@ -33,15 +33,15 @@ function Home() {
     Intro text for visitor and popup to take the name
     */}
         {/* </section> */}
-        {/* <div className="scroll-helper" id="about" ></div> */}
+        <div className="scroll-helper" id="about" ></div>
         <section className="base about-section" >
             <About />
             {/* 
         photo / intro text / CTA - Email, Resume / Skills / LinkedIn / Twitter
         */}
         </section>
-        {/* <div className="scroll-helper" id="projects"></div> */}
-        <section className="base project-section">
+        <div className="scroll-helper" id="projects"></div>
+        <section className="base project-section" id="projects">
             <div className="inner">
                 <h1>Projects</h1>
                 <Projects />
