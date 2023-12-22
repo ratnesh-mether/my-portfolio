@@ -6,6 +6,7 @@ import React from "react";
 import { setPdfViewerFlag } from '../../redux-state/slice';
 import PdfViewer from '../../components/Pdf-viewer/Pdf-viewer';
 import Projects from '../../components/Projects/Projects';
+import Testimonials from '../../components/Testimonials/Testimonials';
 
 function Home() {
     const dispatch = useDispatch();
@@ -56,6 +57,13 @@ function Home() {
             <div className="scroll-helper"></div>
         </section>
         {/* <div className="scroll-helper" id="contact"></div> */}
+        <section className="base testimonials-section">
+            <div className="inner">
+                <h1>Testimonials</h1>
+                <Testimonials />
+            </div>
+            {/* <div className="scroll-helper"></div> */}
+        </section>
         <section className="base contact-section">
             <div className="inner">
                 <h1>Contact</h1>

@@ -19,6 +19,12 @@ import linkedin from './../assets/social/linkedin-logo.svg';
 import github_logo from './../assets/social/github-logo.svg';
 import stackoverflow from './../assets/social/stackoverflow.svg';
 import twitter from './../assets/social/twitter.svg';
+import seema from './../assets/testimonial/seema.jpeg';
+import kashif from './../assets/testimonial/kashif.jpeg';
+import prashant from './../assets/testimonial/prashant.jpg';
+import vikrant from './../assets/testimonial/vikrant.jpg';
+
+
 
 export const PHONE_NUMBER = '9922040096';
 
@@ -159,3 +165,73 @@ Contact : [Your Phone Number]
 PS : Please feel free to craft your own email and do not forget to remove this line before sending a message 😜
 `
 }
+
+export const TESTIMONIALS = [
+    {
+        name: 'Kashif Farhaz Shamsi',
+        text: `Ratnesh stands out as an exceptional team player, 
+         known for confidently tackling challenges and ensuring reliable outcomes.
+         His expertise in Angular and React showcases his remarkable technical proficiency, 
+         complemented by an effective and creative approach to problem-solving. 
+         Not only is his work marked by keen attention to detail and quality, 
+         but Ratnesh also brings a proactive attitude and consistently exceeds expectations. 
+         His collaborative nature significantly enhances team dynamics, contributing to a more productive and positive work environment. 
+         A role model in balancing technical acumen with strong interpersonal skills, Ratnesh’s presence in any project guarantees success. 
+         His ability to seamlessly blend technical expertise with teamwork makes him an invaluable asset, 
+         deeply impacting every project he undertakes with his unique blend of skills and qualities.`,
+        img: kashif,
+        designation: 'Development Team Lead',
+        profileURL: 'https://www.linkedin.com/in/kfshamsi/',
+        organisation: 'Electrum(formarly PickMySolar)',
+        orgURL: 'https://www.linkedin.com/company/pickmysolar/mycompany/',
+        orgLogo: 'https://assets.solar.com/partner_assets/electrum/electrum-logo.svg'
+    },
+    {
+        name: 'Seema Poonia',
+        text: `I had the pleasure of working with Ratnesh, and I can't say enough good things. 
+        He's not just dedicated, but a real quick learner. Always exceeding expectations, 
+        he dives into challenges with enthusiasm and gets things done efficiently. 
+        Ratnesh is the kind of team player you want – thriving in dynamic setups. 
+        I highly recommend him for not just his hard work but also his positive attitude. 
+        A pleasure to work alongside you!`,
+        img: seema,
+        designation: 'Senior Frontend Developer',
+        profileURL: 'https://www.linkedin.com/in/seema-poonia/',
+        organisation: 'Electrum(formarly PickMySolar)',
+        orgURL: 'https://www.linkedin.com/company/pickmysolar/mycompany/',
+        orgLogo: 'https://assets.solar.com/partner_assets/electrum/electrum-logo.svg'
+    },
+    {
+        name: 'Prashant Deshmukh',
+        text: `Ratnesh is an outstanding Front-End Developer whose coding skills and 
+        technical expertise have consistently delivered high-quality, scalable software solutions. 
+His knack for swiftly mastering new technologies has made him an invaluable asset in our rapidly evolving field. 
+Not only does he excel in team environments, but Ratnesh also demonstrates strong leadership qualities, 
+efficiently managing teams and projects in fast-paced settings. 
+His ability to collaborate seamlessly with cross-functional teams fosters a culture of success and achievement. 
+Overall, Ratnesh's blend of technical prowess, adaptability, and leadership makes him an indispensable contributor to any project or team.`,
+        img: prashant,
+        designation: 'Senior Backend Developer',
+        profileURL: 'https://www.linkedin.com/in/prashantvdeshmukh613/',
+        organisation: 'Electrum(formarly PickMySolar)',
+        orgURL: 'https://www.linkedin.com/company/pickmysolar/mycompany/',
+        orgLogo: 'https://assets.solar.com/partner_assets/electrum/electrum-logo.svg'
+    },
+    {
+        name: 'Vikrant Chaudhari',
+        text: `I had the pleasure of working closely with Ratnesh on several projects, 
+        and I am highly impressed with his skills and dedication as a frontend developer. 
+        He possesses a deep understanding of frontend technologies and consistently delivers high-quality work.
+Ratnesh has a keen eye for design and a strong ability to translate complex ideas into user-friendly interfaces. 
+His proficiency in HTML, CSS, and JavaScript is exceptional, and he always stay up-to-date with the latest industry trends and best practices.
+One of Ratnesh standout qualities is his ability to collaborate effectively within a team. 
+He communicates clearly, takes initiative, 
+and is always willing to go the extra mile to ensure the success of the project.Ratnesh played a crucial role in Eclipse Project where his problem-solving skills and attention to detail were instrumental in overcoming challenges.`,
+        img: vikrant,
+        designation: 'Automation QA Engineer',
+        profileURL: 'https://www.linkedin.com/in/vikrant-chaudhari-677980231/',
+        organisation: 'Electrum(formarly PickMySolar)',
+        orgURL: 'https://www.linkedin.com/company/pickmysolar/mycompany/',
+        orgLogo: 'https://assets.solar.com/partner_assets/electrum/electrum-logo.svg'
+    }
+]
