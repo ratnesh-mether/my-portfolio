@@ -31,13 +31,13 @@ function About() {
     }
     return <main className='about-component'>
         <div className="intro-section">
-            <div className="profile-cover">
-
-            </div>
-            <div className="profile-image-container">
-                {/* <img src={PROFILE_PICTURE} alt="Profile" /> */}
-            </div>
+            <div className="profile-cover"></div>
+            <div className="profile-image-container"></div>
             <div className="intro-text-links">
+                <div className="me">
+                    <h2>Ratnesh Mether</h2>
+                    <p>Frontend Developer</p>
+                </div>
                 <div className="text">
                     <p>{INTRODUCTION_PARA_1}</p>
                     <p>{INTRODUCTION_PARA_2}</p>

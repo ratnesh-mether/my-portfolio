@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import About from '../../components/About/About';
-import Welcome from '../../components/Welcome/Welcome';
 import './Home.scss'
 import React from "react";
 import { setPdfViewerFlag } from '../../redux-state/slice';
 import PdfViewer from '../../components/Pdf-viewer/Pdf-viewer';
 import Projects from '../../components/Projects/Projects';
 import Testimonials from '../../components/Testimonials/Testimonials';
+import Experiance from '../../components/Experiance/Experiance';
 
 function Home() {
     const dispatch = useDispatch();
@@ -26,55 +26,38 @@ function Home() {
     }
     return <main className="home-component">
         {handlePDFView()}
-        {/* <div className="scroll-helper" id="home"></div>
-        <section className="base welcome-section">
-            <Welcome></Welcome> */}
-
-        {/* 
-    Intro text for visitor and popup to take the name
-    */}
-        {/* </section> */}
-        <div className="scroll-helper" id="about" ></div>
+        <div style={{ visibility: 'hidden', height: 0, position: 'relative', top: -32 }} id="home"></div>
         <section className="base about-section" >
             <About />
-            {/* 
-        photo / intro text / CTA - Email, Resume / Skills / LinkedIn / Twitter
-        */}
+            <div style={{ visibility: 'hidden', height: 0, position: 'relative', top: -32 }} id="projects"></div>
         </section>
-        <div className="scroll-helper" id="projects"></div>
-        <section className="base project-section" id="projects">
+
+        <section className="base project-section">
             <div className="inner">
-                <h1>Projects</h1>
+                <h2 className='headings'>My Work</h2>
                 <Projects />
             </div>
-
+            <div style={{ visibility: 'hidden', height: 0, position: 'relative', top: -32 }} id="experiance"></div>
         </section>
-        {/* <div className="scroll-helper" id="education"></div> */}
         <section className="base education-section">
+            <h2 className='headings'>Experiance & Education</h2>
             <div className="inner">
-                <h1>Experiance & Education</h1>
+                <Experiance />
             </div>
-            <div className="scroll-helper"></div>
+            {/* <div style={{ visibility: 'hidden', height: 0 }} id="experiance"></div> */}
         </section>
-        {/* <div className="scroll-helper" id="contact"></div> */}
         <section className="base testimonials-section">
             <div className="inner">
-                <h1>Testimonials</h1>
+                <h2 className='headings'>What Peers has to say about Me!</h2>
                 <Testimonials />
             </div>
-            {/* <div className="scroll-helper"></div> */}
         </section>
-        <section className="base contact-section">
+        {/* <section className="base contact-section" id="contact">
             <div className="inner">
                 <h1>Contact</h1>
             </div>
-            {/* <div className="scroll-helper"></div> */}
-        </section>
-        <section className="base outro-section">
-            <div className="inner">
-                <h1>Outro</h1>
-            </div>
-        </section>
+        </section> */}
+
     </main >;
 }
 

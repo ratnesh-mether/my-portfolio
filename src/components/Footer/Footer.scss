@@ -32,3 +32,15 @@ footer {
         }
     }
 }
+@media (width <= 640px) {
+    footer {
+        height: 56px;
+        .logo-section {
+            margin: auto;
+        }
+        .logo-container {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

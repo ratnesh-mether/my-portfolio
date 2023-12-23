@@ -1,16 +1,15 @@
 @import "./../../Shared/Scss-snippets.scss";
 .home-component {
-    padding: 0 0 56px;
+    padding: 0 0 7em;
+    @include flex-box(normal, normal, column);
     .base {
-        // height: 100vh;
-        // position: sticky;
-        // bottom: 0;
-        // @include flex-box(center, center);
-        // box-sizing: border-box;
-        // padding: 96px 32px 32px 32px;
-        // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-        //     rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        padding: 32px 0;
+        margin-bottom: 48px;
+    }
+    .headings {
+        font-size: 40px;
+        font-weight: 600;
+        margin: 0 0 24px;
+        width: fit-content;
     }
     .pdf-viewer-container {
         position: fixed;
@@ -41,6 +40,7 @@
     }
     .about-section {
         background-color: #fff;
+        padding-top: 32px;
         // z-index: 9;
         /**
             Shortlisted colours:
@@ -71,7 +71,21 @@
 @media (width <= 1280px) {
     .home-component {
         .base {
-            padding: 0 0 32px;
+            // padding: 0 0 32px;
+        }
+        .about-section {
+            padding: 0;
+        }
+    }
+}
+@media (width <= 640px) {
+    .home-component {
+        .base {
+            margin-bottom: 40px;
+        }
+        .headings {
+            font-size: 28px;
+            margin: 0 0 16px;
         }
     }
 }

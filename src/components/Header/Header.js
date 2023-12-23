@@ -15,14 +15,11 @@ function Header() {
                     <a className="type-text" href="#home">Home</a>
                 </div>
                 <div className="page-type">
-                    <a className="type-text" href="#about">About</a>
-                </div>
-                <div className="page-type">
                     <a className="type-text" href="#projects">Projects</a>
                 </div>
-                {/* <div className="page-type">
-                <p className="type-text">Education</p>
-            </div> */}
+                <div className="page-type">
+                    <a className="type-text" href="#experiance">Experiance</a>
+                </div>
                 <div className="page-type">
                     <a className="type-text" href="#contact">Contact</a>
                 </div>
@@ -40,10 +37,10 @@ function Header() {
                     <p className="close" onClick={breadcrumbHandler}>x</p>
 
                     <div className="options">
-                        <p onClick={breadcrumbHandler}>Home</p>
-                        <p onClick={breadcrumbHandler}>About</p>
-                        <p onClick={breadcrumbHandler}>Project</p>
-                        <p onClick={breadcrumbHandler}>Contact</p>
+                        <a href="#home" onClick={breadcrumbHandler}>Home</a>
+                        <a href="#projects" onClick={breadcrumbHandler}>About</a>
+                        <a href="#Experiance" onClick={breadcrumbHandler}>Project</a>
+                        <a href="#contact" onClick={breadcrumbHandler}>Contact</a>
                     </div>
 
 

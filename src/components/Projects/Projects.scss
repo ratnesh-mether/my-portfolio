@@ -1,7 +1,7 @@
 @import "./../../shared/Scss-snippets.scss";
 .projects-component {
     @include flex-box(center, normal, column);
-    row-gap: 32px;
+    row-gap: 48px;
     .project-info-container {
         @include flex-box(center, normal, column);
         column-gap: 32px;
@@ -10,9 +10,9 @@
         }
         h2 {
             color: $color-dark-two !important;
-            margin: 0 0 16px 0;
+            margin: 0 0 24px 0;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 28px;
         }
     }
 
@@ -67,7 +67,7 @@
     .more-project {
         color: $color-dark-two;
         cursor: pointer;
-        font-weight: 600;
+        font-weight: 500;
     }
 }
 @media (width <= 1280px) {
@@ -125,7 +125,20 @@
             }
             .more-container {
                 font-size: 13px;
+                font-weight: 500;
                 color: $color-dark-two;
+            }
+        }
+        .info-text {
+            ul {
+                font-size: 13px;
+                line-height: 24px !important;
+            }
+        }
+        .project-info-container {
+            h2 {
+                margin: 0 0 16px 0;
+                font-size: 18px;
             }
         }
         .project-info-container:nth-of-type(2n) {

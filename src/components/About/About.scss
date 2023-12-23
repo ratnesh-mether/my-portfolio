@@ -1,7 +1,7 @@
 @import "./../../Shared/Scss-snippets.scss";
 .about-component {
     @include flex-box(center, center, column);
-    row-gap: 64px;
+    row-gap: 56px;
     .profile-cover {
         display: none;
     }
@@ -12,6 +12,21 @@
     .intro-text-links {
         @include flex-box(normal, normal, column);
         row-gap: 32px;
+    }
+    .me {
+        position: relative;
+        top: 16px;
+        h2 {
+            line-height: 1;
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+        }
+        p {
+            font-weight: 500;
+            font-size: 20px;
+            color: #0710c3;
+        }
     }
     .text {
         @include flex-box(normal, normal, column);
@@ -55,7 +70,7 @@
             touch-action: manipulation;
             white-space: nowrap;
             will-change: box-shadow, transform;
-            font-size: 16px;
+            font-size: 13px;
             cursor: pointer;
         }
         button:focus {
@@ -184,7 +199,7 @@
             top: 8.5em;
         }
         .intro-text-links {
-            margin-top: 7em;
+            margin-top: 5em;
         }
         .intro-section {
             flex-direction: column;
@@ -195,6 +210,7 @@
 
 @media (width <= 640px) {
     .about-component {
+        row-gap: 28px;
         .profile-cover {
             height: 200px;
         }
@@ -204,12 +220,23 @@
             background-size: auto 17em;
             top: 8.5em;
         }
+        .me {
+            h2 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
         .text {
             font-size: 13px;
             font-weight: normal;
+            row-gap: 4px;
+            line-height: 28px;
         }
         .intro-text-links {
             margin-top: 4em;
+            row-gap: 24px;
         }
         .links {
             flex-direction: column-reverse;

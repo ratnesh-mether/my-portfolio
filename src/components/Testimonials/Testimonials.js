@@ -1,5 +1,4 @@
 import ControlledCarousel from '../../shared/Carousel/Carousel';
-import { TESTIMONIALS } from '../../utilities/Constants';
 import './Testimonials.scss';
 import React from "react";
 function Testimonials() {

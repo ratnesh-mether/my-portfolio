@@ -23,7 +23,8 @@ import seema from './../assets/testimonial/seema.jpeg';
 import kashif from './../assets/testimonial/kashif.jpeg';
 import prashant from './../assets/testimonial/prashant.jpg';
 import vikrant from './../assets/testimonial/vikrant.jpg';
-
+import fergusson from './../assets/social/fergusson.jpeg';
+import tc from './../assets/social/tcc.png';
 
 
 export const PHONE_NUMBER = '9922040096';
@@ -133,7 +134,7 @@ export const PROJECTS_DATA = [
     }
 ]
 
-export const INTRODUCTION_PARA_1 = `Hey there, I'm Ratnesh Mether, 
+export const INTRODUCTION_PARA_1 = `Hey there, I'm 
 a passionate enthusiast in the world of Frontend development and crafting user-friendly interfaces.        
 My journey took root at Fergusson College, Pune, 
 where I earned my master's degree. That's where my interest in  the world of tech really took flight, 
@@ -233,5 +234,29 @@ and is always willing to go the extra mile to ensure the success of the project.
         organisation: 'Electrum(formarly PickMySolar)',
         orgURL: 'https://www.linkedin.com/company/pickmysolar/mycompany/',
         orgLogo: 'https://assets.solar.com/partner_assets/electrum/electrum-logo.svg'
+    }
+]
+
+export const EXPERIANCE = [
+    {
+        name: 'Electrum(formerly PickMySolar)',
+        img: 'https://assets.solar.com/partner_assets/electrum/electrum-logo.svg',
+        designation: 'Frontend Developer',
+        year: '2021 - Present',
+        link: `https://www.linkedin.com/company/pickmysolar/mycompany/`
+    },
+    {
+        name: 'Fergusson College, Pune',
+        img: fergusson,
+        designation: 'Student',
+        year: '2018 - 2020',
+        link: `https://www.linkedin.com/school/fergusson-college/`
+    },
+    {
+        name: 'Tuljaram Chaturchand College, Baramati',
+        img: tc,
+        designation: 'Student',
+        year: '2015 - 2017',
+        link: `https://www.linkedin.com/school/tuljaram-chaturchand-college-baramati-dist.pune-413102/`
     }
 ]
