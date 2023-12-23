@@ -52,7 +52,7 @@ function Home() {
         {/* <div className="scroll-helper" id="education"></div> */}
         <section className="base education-section">
             <div className="inner">
-                <h1>Education</h1>
+                <h1>Experiance & Education</h1>
             </div>
             <div className="scroll-helper"></div>
         </section>

@@ -2,18 +2,23 @@
 
 .testimonials-section {
     .info-card {
-        max-width: 800px;
+        max-width: 75%;
+        margin: auto;
         @include flex-box(normal, normal, column);
         row-gap: 16px;
-        background-color: #bae2f8;
+        background-color: #fff;
         padding: 24px;
         border-radius: 8px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6),
+            0px 0px 1px 0px rgb(4, 6, 255);
         .meta {
             @include flex-box(center, space-between, row);
         }
         .personal-info {
             @include flex-box(center, normal, row);
             column-gap: 24px;
+            text-decoration: none;
+            color: $color-dark-one;
         }
         .name {
             font-size: 18px;
@@ -36,10 +41,52 @@
                 border-radius: 50%;
             }
         }
+        .org-img {
+            padding: 8px;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6),
+                0px 0px 1px 0px rgb(4, 6, 255);
+            align-self: flex-start;
+        }
         .text {
-            font-size: 13px;
+            font-size: 16px;
             text-align: justify;
-            line-height: 26px;
+            line-height: 34px;
+            margin: 0;
+        }
+    }
+}
+
+@media (width <= 640px) {
+    .testimonials-section {
+        .info-card {
+            max-width: 85%;
+            padding: 16px;
+            .meta {
+                flex-direction: column;
+                row-gap: 16px;
+            }
+            .name {
+                font-size: 16px;
+            }
+            .info-text {
+                text-align: center;
+            }
+            .text {
+                font-size: 13px;
+                line-height: 26px;
+            }
+            .personal-info {
+                flex-direction: column;
+                row-gap: 16px;
+            }
+            .image-container {
+                flex-shrink: 0;
+            }
+            .org-img {
+                align-self: center;
+            }
         }
     }
 }
