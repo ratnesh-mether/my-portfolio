@@ -66,6 +66,13 @@
         background-color: #fff;
         // z-index: 1;
     }
+    .thanks {
+        text-align: center;
+        color: #7d0000;
+        a {
+            color: #0070ff !important;
+        }
+    }
 }
 
 @media (width <= 1280px) {
