@@ -13,7 +13,7 @@ import solar from './../assets/projects/solar.webp';
 import electrum from './../assets/projects/electrum.webp';
 import injection from './../assets/projects/injection.webp';
 import sirius from './../assets/projects/sirius.webp';
-import controlCenter from './../assets/projects/control-center.jpeg';
+import controlCenter from './../assets/projects/control-center.png';
 import profilePicture from './../assets/profile_portfolio.png';
 import linkedin from './../assets/social/linkedin-logo.svg';
 import github_logo from './../assets/social/github-logo.svg';
@@ -25,6 +25,8 @@ import prashant from './../assets/testimonial/prashant.jpg';
 import vikrant from './../assets/testimonial/vikrant.jpg';
 import fergusson from './../assets/social/fergusson.jpeg';
 import tc from './../assets/social/tcc.png';
+
+
 
 
 export const PHONE_NUMBER = '9922040096';
@@ -119,7 +121,9 @@ export const PROJECTS_DATA = [
         url: 'https://controlcenter-v1.solar.com/',
         image: controlCenter,
         points: [
-            'Control Center is Electrum\'s internal operational dashboard, facilitating efficient management of all business activities.'
+            'Control Center is Electrum\'s internal operational dashboard, facilitating efficient management of all business activities.',
+            'Implemented highly responsive user interface using in collaboration with UI designers.',
+            'Contributed in various modules like Profile and User Listings.'
         ]
     },
     {

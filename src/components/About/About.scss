@@ -40,7 +40,7 @@
     }
     .links {
         @include flex-box(normal, center, row);
-        column-gap: 24px;
+        column-gap: 32px;
         a {
             position: absolute;
         }
@@ -50,10 +50,8 @@
             background-color: #fcfcfd;
             border-radius: 4px;
             border-width: 0;
-            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
             box-sizing: border-box;
-            color: #36395a;
+            color: #fff;
             cursor: pointer;
             display: inline-flex;
             // font-family: "JetBrains Mono", monospace;
@@ -74,7 +72,9 @@
             touch-action: manipulation;
             white-space: nowrap;
             will-change: box-shadow, transform;
-            font-size: 13px;
+            font-size: 16px;
+            // letter-spacing: 1.2px;
+            font-weight: 500;
             cursor: pointer;
         }
         button:focus {
@@ -82,25 +82,53 @@
                 rgba(45, 35, 66, 0.4) 0 2px 4px,
                 rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
         }
-        button:hover {
-            box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-            transform: translateY(-2px);
-        }
+        // button:hover {
+        //     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+        //         rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+        //     transform: translateY(-2px);
+        // }
         button:active {
             box-shadow: #d6d6e7 0 3px 7px inset;
             transform: translateY(2px);
+        }
+        .resume {
+            background: #0070ff;
+            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #0057c6 0 -3px 0 inset;
+        }
+        .resume:hover {
+            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #83b8fd 0 -3px 0 inset;
+        }
+        .email {
+            background: #ffa610;
+            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #c38010 0 -3px 0 inset;
+        }
+        .email:hover {
+            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #f5ca84 0 -3px 0 inset;
+        }
+        .call {
+            background: #5cdb5c;
+            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3e8e48 0 -3px 0 inset;
+        }
+        .call:hover {
+            box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #b2eaad 0 -3px 0 inset;
+            // transform: translateY(-2px);
         }
         // box-shadow: rgb(73 32 160 / 40%) 0 2px 4px, rgb(84 24 210 / 30%) 0 7px 13px -3px, #7979b6 0 -3px 0 inset;
     }
     .contact-button {
         display: flex;
-        column-gap: 24px;
+        column-gap: 32px;
     }
     .skills-section {
         @include flex-box(normal, normal, row);
         max-width: 100%;
-        overflow: scroll;
+        overflow-x: auto;
         column-gap: 16px;
         padding: 4px 2px 16px;
 
@@ -173,7 +201,7 @@
         flex-shrink: 0;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
             0px 0px 5px -2px rgba(0, 0, 0);
-        background-color: #eff8ff;
+        background-color: #b8e0ff;
         img {
             width: 100%;
             height: 100%;
@@ -248,6 +276,7 @@
             width: 100%;
             button {
                 width: 100%;
+                font-size: 14px;
             }
         }
         .contact-button {

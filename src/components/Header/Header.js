@@ -7,9 +7,6 @@ function Header() {
     }
     return <>
         <header>
-            {/* <div className="logo">
-                <img src={logo} alt="Logo" />
-            </div> */}
             <div className="page-navigator">
                 <div className="page-type">
                     <a className="type-text" href="#home">Home</a>
@@ -39,7 +36,7 @@ function Header() {
                     <div className="options">
                         <a href="#home" onClick={breadcrumbHandler}>Home</a>
                         <a href="#projects" onClick={breadcrumbHandler}>About</a>
-                        <a href="#Experiance" onClick={breadcrumbHandler}>Project</a>
+                        <a href="#experiance" onClick={breadcrumbHandler}>Project</a>
                         <a href="#contact" onClick={breadcrumbHandler}>Contact</a>
                     </div>
 

@@ -57,6 +57,7 @@ function Home() {
                 <h1>Contact</h1>
             </div>
         </section> */}
+        <p className='thanks'>A special Thanks to <a href="https://www.linkedin.com/in/shraddha-takale-3b4184281/">SHRADDHA</a> on helping for this Beautiful Project 	&#9829;</p>
 
     </main >;
 }

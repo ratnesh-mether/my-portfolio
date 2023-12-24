@@ -44,10 +44,10 @@ function About() {
                     <p>{INTRODUCTION_PARA_3}</p>
                 </div>
                 <div className="links">
-                    <button onClick={dispatchHandler}>View Resume</button>
+                    <button onClick={dispatchHandler} className='resume'>View Resume</button>
                     <div className="contact-button">
-                        <button onClick={composeEmail}> Email </button>
-                        <button onClick={handleCall}> Call</button>
+                        <button onClick={composeEmail} className='email'> Email </button>
+                        <button onClick={handleCall} className='call'> Call</button>
                     </div>
                     <a href={RESUME_PATH} ref={pdfDownloadRef} className="pdf-link" download="Frontend-Developer-Ratnesh-Mether.pdf">Resume</a>
                 </div>
