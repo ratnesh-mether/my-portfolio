@@ -34,13 +34,13 @@ function Home() {
 
         <section className="base project-section">
             <div className="inner">
-                <h2 className='headings'>My Work</h2>
+                <h2 className='headings'><span>&#129495;</span> My Work</h2>
                 <Projects />
             </div>
             <div style={{ visibility: 'hidden', height: 0, position: 'relative', top: -32 }} id="experiance"></div>
         </section>
         <section className="base education-section">
-            <h2 className='headings'>Experiance & Education</h2>
+            <h2 className='headings'><span>&#128188;</span> Experience & Education</h2>
             <div className="inner">
                 <Experiance />
             </div>
@@ -48,7 +48,7 @@ function Home() {
         </section>
         <section className="base testimonials-section">
             <div className="inner">
-                <h2 className='headings'>What Peers has to say about Me!</h2>
+                <h2 className='headings'><span>&#128107;</span> What Peers has to say about Me!</h2>
                 <Testimonials />
             </div>
         </section>

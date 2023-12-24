@@ -59,7 +59,7 @@ function Projects() {
                     <ul>
                         {
                             project.points.slice(0, loadMorePoint[projectIndex] ? 1 : project.points.length).map((point, index) => {
-                                return <li key={index}>{point}</li>
+                                return <li key={index}><span className="info">&#127919;</span><span className="tick">&#9989;</span> {point}</li>
                             })
                         }
                     </ul>

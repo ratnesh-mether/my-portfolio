@@ -31,12 +31,27 @@
                 row-gap: 8px;
                 line-height: 32px;
                 margin: 0;
-                text-align: justify;
+                // text-align: justify;
+                list-style-type: none;
                 li {
                     align-self: self-start;
                 }
+                .info {
+                    display: none;
+                }
+                .tick {
+                    margin-right: 4px;
+                    font-size: 20px;
+                }
                 :nth-child(1) {
                     font-weight: 600;
+                    .info {
+                        display: inline-block;
+                        font-size: 24px;
+                    }
+                    .tick {
+                        display: none;
+                    }
                 }
             }
         }
@@ -128,13 +143,20 @@
                 font-weight: 500;
                 color: $color-dark-two;
             }
-        }
-        .info-text {
-            ul {
-                font-size: 13px;
-                line-height: 24px !important;
+            .info-text {
+                ul {
+                    font-size: 13px;
+                    line-height: 24px !important;
+                    .tick {
+                        font-size: 16px;
+                    }
+                    .info {
+                        font-size: 20px !important;
+                    }
+                }
             }
         }
+
         .project-info-container {
             h2 {
                 margin: 0 0 16px 0;
