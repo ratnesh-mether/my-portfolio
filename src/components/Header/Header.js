@@ -18,7 +18,7 @@ function Header() {
                     <a className="type-text" href="#projects">Projects</a>
                 </div>
                 <div className="page-type">
-                    <a className="type-text" href="#experiance">Experiance</a>
+                    <a className="type-text" href="#experiance">Experience</a>
                 </div>
                 <div className="page-type">
                     <a className="type-text" href="#contact">Contact</a>

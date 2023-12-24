@@ -45,6 +45,10 @@ export const SKILLS = {
         name: 'React',
         logo: react
     },
+    angular: {
+        name: 'Angular',
+        logo: angular
+    },
     javascript: {
         name: 'JS',
         logo: javascript
@@ -57,9 +61,9 @@ export const SKILLS = {
         name: 'CSS',
         logo: css
     },
-    angular: {
-        name: 'Angular',
-        logo: angular
+    bootstrap: {
+        name: 'Bootstrap',
+        logo: bootstrap
     },
     github: {
         name: 'GitHub',
@@ -73,10 +77,6 @@ export const SKILLS = {
         name: 'Postman',
         logo: postman
     },
-    bootstrap: {
-        name: 'BS',
-        logo: bootstrap
-    },
     jira: {
         name: 'JIRA',
         logo: jira
@@ -89,7 +89,7 @@ export const PROJECTS_DATA = [
         url: 'https://www.solar.com/solar-reviews/',
         image: sirius,
         points: [
-            ' Project Sirius is a platform that empowers users with valuable insights to support informed purchasing decisions.',
+            'Project Sirius is a platform that empowers users with valuable insights to support informed purchasing decisions.',
             'Independently directed a significant portion encompassing more than 3 modules, namely profiles, reviews, and listings.',
             'Resulted 300+ installer reviews within a month period.'
         ]
@@ -169,7 +169,7 @@ PS : Please feel free to craft your own email and do not forget to remove this l
 
 export const TESTIMONIALS = [
     {
-        name: 'Kashif Farhaz Shamsi',
+        name: 'Kashif Faraz Shamsi',
         text: `Ratnesh stands out as an exceptional team player, 
          known for confidently tackling challenges and ensuring reliable outcomes.
          His expertise in Angular and React showcases his remarkable technical proficiency, 

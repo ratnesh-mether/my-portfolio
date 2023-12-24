@@ -8,11 +8,11 @@ function About() {
     const dispatch = useDispatch();
     // const pdfViewerFlag = useSelector(state => state.slice.pdfViewerFlag);
     const dispatchHandler = () => {
-        const flag = localStorage.getItem('isPDFDownloaded');
-        if (!flag) {
-            localStorage.setItem('isPDFDownloaded', true);
-            pdfDownloadRef.current.click();
-        }
+        // const flag = localStorage.getItem('isPDFDownloaded');
+        // if (!flag) {
+        //     localStorage.setItem('isPDFDownloaded', true);
+        //     pdfDownloadRef.current.click();
+        // }
         dispatch(setPdfViewerFlag(true))
     }
     const handleCall = () => {
@@ -35,7 +35,7 @@ function About() {
             <div className="profile-image-container"></div>
             <div className="intro-text-links">
                 <div className="me">
-                    <h2>Ratnesh Mether</h2>
+                    <h2><a href="https://www.linkedin.com/in/ratnesh-mether" target='_blank' rel="noreferrer">Ratnesh Mether <span>&#128640;</span></a></h2>
                     <p>Frontend Developer</p>
                 </div>
                 <div className="text">
