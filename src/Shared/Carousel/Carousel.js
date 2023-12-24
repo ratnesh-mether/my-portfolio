@@ -12,7 +12,7 @@ function ControlledCarousel() {
     };
     const showTestimonal = () => {
         return TESTIMONIALS.map((testimonial) => {
-            return <Carousel.Item >
+            return <Carousel.Item key={testimonial.name}>
                 <div className="info-card">
                     <div className="meta">
                         <a className="personal-info" href={testimonial.profileURL} target='_blank' rel='noreferrer'>

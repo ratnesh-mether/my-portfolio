@@ -35,8 +35,8 @@ function Header() {
 
                     <div className="options">
                         <a href="#home" onClick={breadcrumbHandler}>Home</a>
-                        <a href="#projects" onClick={breadcrumbHandler}>About</a>
-                        <a href="#experiance" onClick={breadcrumbHandler}>Project</a>
+                        <a href="#projects" onClick={breadcrumbHandler}>Projects</a>
+                        <a href="#experiance" onClick={breadcrumbHandler}>Experience</a>
                         <a href="#contact" onClick={breadcrumbHandler}>Contact</a>
                     </div>
 

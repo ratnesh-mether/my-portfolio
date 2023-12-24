@@ -11,10 +11,11 @@ function Projects() {
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
     useEffect(() => {
-        const updateDimension = () => {
-            setScreenSize(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateDimension);
+        setScreenSize(getCurrentDimension())
+        const screenSize = getCurrentDimension();
+        updateMorePoints(screenSize);
+    }, [])
+    const updateMorePoints = (screenSize) => {
         if (screenSize.width > 640) {
             setLoadMorePoint(() => {
                 const emptyArray = Array(5).fill(false);
@@ -26,11 +27,7 @@ function Projects() {
                 return emptyArray;
             })
         }
-        return (() => {
-            window.removeEventListener('resize', updateDimension);
-        })
-    }, [screenSize])
-
+    }
     const loadMoreHandler = () => {
         setLoadMore(!loadMore)
     }
