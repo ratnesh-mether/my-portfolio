@@ -31,6 +31,9 @@
         p {
             font-weight: 500;
         }
+        p:hover {
+            text-decoration: underline;
+        }
     }
     .designation {
         border-left: 1px solid #e6e1e1;
@@ -46,13 +49,16 @@
         height: 100px;
         width: 130px;
         margin: 0 auto 8px;
-
+        background: url(./../../assets/social/fergusson.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 0.5px solid #cfc9c9;
+        border-radius: 4px;
+        padding: 4px;
         img {
             height: 100%;
             width: 100%;
-            border: 0.5px solid #cfc9c9;
-            border-radius: 4px;
-            padding: 4px;
         }
     }
 }

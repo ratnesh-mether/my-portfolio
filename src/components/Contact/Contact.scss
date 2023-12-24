@@ -1,0 +1,76 @@
+@import "./../../shared/Scss-snippets.scss";
+.contact-component {
+    @include flex-box(normal, normal, row);
+    width: fit-content;
+    margin: auto;
+    // padding: 32px;
+    .text-container {
+        // border-right: 2px solid #e6e1e1;
+        @include flex-box(flex-start, center, column);
+        width: fit-content;
+        row-gap: 16px;
+    }
+    .qr-img {
+        max-width: 250px;
+        margin-bottom: 16px;
+        img {
+            width: 100%;
+        }
+    }
+    hr {
+        border: none;
+        border-left: 2px solid #e6e1e1;
+        height: inherit;
+        width: 1px;
+        opacity: 1;
+        margin: 24px 56px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .name {
+        font-weight: 600;
+    }
+    .link {
+        color: $color-dark-two;
+        cursor: pointer;
+    }
+    .icon {
+        font-size: 24px;
+        margin-right: 12px;
+    }
+    .qr-text {
+        a {
+            color: $color-dark-two !important;
+            font-weight: 500;
+        }
+        font-size: 16px;
+    }
+}
+
+@media (width <= 640px) {
+    .contact-component {
+        flex-direction: column;
+        .text-container {
+            row-gap: 12px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .icon {
+            font-size: 16px;
+        }
+        hr {
+            margin: 24px auto;
+            width: 100%;
+            border: 1px solid #e6e1e1;
+        }
+        .qr-img {
+            // margin: 0 auto;
+        }
+        .qr-text {
+            font-size: 13px;
+            text-align: center;
+        }
+    }
+}

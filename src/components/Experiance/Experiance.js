@@ -5,11 +5,11 @@ import { EXPERIANCE } from "../../utilities/Constants";
 function Experiance() {
     const showExperiance = () => {
         return EXPERIANCE.map((exp) => {
-            return <div className="experiance">
+            return <div className="experiance" key={exp.name}>
                 <div className="column org">
                     <a href={exp.link} target="_blank" rel="noreferrer">
-                        <div className="logo">
-                            <img src={exp.img} alt={exp.name} />
+                        <div className="logo" style={{ backgroundImage: "url(" + exp.img + ")" }}>
+                            {/* <img src={exp.img} alt={exp.name} /> */}
                         </div>
                         <p>{exp.name}</p>
                     </a>

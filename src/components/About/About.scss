@@ -20,7 +20,6 @@
             line-height: 1;
             font-size: 40px;
             font-weight: 600;
-            letter-spacing: 1.2px;
         }
         h2:hover {
             text-decoration: underline;
@@ -73,7 +72,6 @@
             white-space: nowrap;
             will-change: box-shadow, transform;
             font-size: 16px;
-            // letter-spacing: 1.2px;
             font-weight: 500;
             cursor: pointer;
         }
@@ -82,44 +80,31 @@
                 rgba(45, 35, 66, 0.4) 0 2px 4px,
                 rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
         }
-        // button:hover {
-        //     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-        //         rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-        //     transform: translateY(-2px);
-        // }
         button:active {
             box-shadow: #d6d6e7 0 3px 7px inset;
             transform: translateY(2px);
         }
         .resume {
             background: #0070ff;
-            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #0057c6 0 -3px 0 inset;
+            @include CTA(#0057c6);
         }
         .resume:hover {
-            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #83b8fd 0 -3px 0 inset;
+            @include CTA(#83b8fd);
         }
         .email {
             background: #ffa610;
-            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #c38010 0 -3px 0 inset;
+            @include CTA(#c38010);
         }
         .email:hover {
-            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #f5ca84 0 -3px 0 inset;
+            @include CTA(#f5ca84);
         }
         .call {
             background: #5cdb5c;
-            box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3e8e48 0 -3px 0 inset;
+            @include CTA(#3e8e48);
         }
         .call:hover {
-            box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-                rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #b2eaad 0 -3px 0 inset;
-            // transform: translateY(-2px);
+            @include CTA(#b2eaad);
         }
-        // box-shadow: rgb(73 32 160 / 40%) 0 2px 4px, rgb(84 24 210 / 30%) 0 7px 13px -3px, #7979b6 0 -3px 0 inset;
     }
     .contact-button {
         display: flex;
@@ -200,7 +185,7 @@
         transform: rotate(10deg);
         flex-shrink: 0;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
-            0px 0px 5px -2px rgba(0, 0, 0);
+            0px 0px 4px 0px rgb(35 28 132);
         background-color: #b8e0ff;
         img {
             width: 100%;

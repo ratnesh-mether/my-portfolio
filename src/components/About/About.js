@@ -1,18 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './../About/About.scss';
 import { setPdfViewerFlag } from '../../redux-state/slice';
 import { useRef } from 'react';
-import { EMAIL_DATA, INTRODUCTION_PARA_1, INTRODUCTION_PARA_2, INTRODUCTION_PARA_3, PHONE_NUMBER, PROFILE_PICTURE, RESUME_PATH, SKILLS } from '../../utilities/Constants';
+import { EMAIL_DATA, INTRODUCTION_PARA_1, INTRODUCTION_PARA_2, INTRODUCTION_PARA_3, PHONE_NUMBER, RESUME_PATH, SKILLS } from '../../utilities/Constants';
 function About() {
     const pdfDownloadRef = useRef(null);
     const dispatch = useDispatch();
-    // const pdfViewerFlag = useSelector(state => state.slice.pdfViewerFlag);
     const dispatchHandler = () => {
-        // const flag = localStorage.getItem('isPDFDownloaded');
-        // if (!flag) {
-        //     localStorage.setItem('isPDFDownloaded', true);
-        //     pdfDownloadRef.current.click();
-        // }
         dispatch(setPdfViewerFlag(true))
     }
     const handleCall = () => {
@@ -25,7 +19,6 @@ function About() {
     const showSkills = () => {
         const skills = Object.entries(SKILLS);
         return skills.map(([key, skill]) => {
-            console.log(skill)
             return <div className="skill" key={key}><div className='tag'><p>{skill.name}</p></div><img src={skill.logo} alt="react" /></div>
         })
     }

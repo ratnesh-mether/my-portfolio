@@ -7,6 +7,7 @@ import PdfViewer from '../../components/Pdf-viewer/Pdf-viewer';
 import Projects from '../../components/Projects/Projects';
 import Testimonials from '../../components/Testimonials/Testimonials';
 import Experiance from '../../components/Experiance/Experiance';
+import Contact from '../../components/Contact/Contact';
 
 function Home() {
     const dispatch = useDispatch();
@@ -44,20 +45,22 @@ function Home() {
             <div className="inner">
                 <Experiance />
             </div>
-            {/* <div style={{ visibility: 'hidden', height: 0 }} id="experiance"></div> */}
         </section>
         <section className="base testimonials-section">
             <div className="inner">
                 <h2 className='headings'><span>&#128107;</span> What Peers has to say about Me!</h2>
                 <Testimonials />
             </div>
+            <div style={{ visibility: 'hidden', height: 0, position: 'relative', top: -32 }} id="contact"></div>
         </section>
-        {/* <section className="base contact-section" id="contact">
+        <section className="base contact-section" id="contact">
             <div className="inner">
-                <h1>Contact</h1>
+                <h2 className='headings'><span>	&#128238;</span> Contact</h2>
+                <Contact />
             </div>
-        </section> */}
-        <p className='thanks'>A special Thanks to <a href="https://www.linkedin.com/in/shraddha-takale-3b4184281/">SHRADDHA</a> on helping for this Beautiful Project 	&#9829;</p>
+        </section>
+        <q>On Earth We are Briefly Gorgeous</q>
+        <p className='thanks'>A special Thanks to <a href="https://www.linkedin.com/in/shraddha-takale-3b4184281/" target="_blank" rel='noreferrer'>SHRADDHA</a> for helping on this Beautiful Project 	&#9829;</p>
 
     </main >;
 }
