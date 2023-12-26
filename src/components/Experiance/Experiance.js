@@ -17,6 +17,7 @@ function Experiance() {
                 </div>
                 <div className="column designation">
                     <p>{exp.designation}</p>
+                    <p>{exp.subDesignation}</p>
                 </div>
                 <div className="column year">
                     <p>{exp.year}</p>

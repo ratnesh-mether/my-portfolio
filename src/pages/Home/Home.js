@@ -60,7 +60,8 @@ function Home() {
             </div>
         </section>
         <q>On Earth We are Briefly Gorgeous</q>
-        <p className='thanks'>A special Thanks to <a href="https://www.linkedin.com/in/shraddha-takale-3b4184281/" target="_blank" rel='noreferrer'>SHRADDHA</a> for helping on this Beautiful Project 	&#9829;</p>
+        <p className='thanks'>Feel free to share your perspective or <a href="https://github.com/ratnesh-mether/my-portfolio" target="_blank" rel='noreferrer'>use template</a> of this project &#9829;</p>
+        {/* <p className='thanks'>A special Thanks to <a href="https://www.linkedin.com/in/shraddha-takale-3b4184281/" target="_blank" rel='noreferrer'>SHRADDHA</a> for helping on this Beautiful Project 	&#9829;</p> */}
 
     </main >;
 }

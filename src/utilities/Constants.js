@@ -248,20 +248,23 @@ export const EXPERIANCE = [
         name: 'Electrum(formerly PickMySolar)',
         img: 'https://assets.solar.com/partner_assets/electrum/electrum-logo.svg',
         designation: 'Frontend Developer',
+        subDesignation: '',
         year: '2021 - Present',
         link: `https://www.linkedin.com/company/pickmysolar/mycompany/`
     },
     {
         name: 'Fergusson College, Pune',
         img: fergusson,
-        designation: 'Student',
+        designation: 'MSc',
+        subDesignation: '(Computer Applications)',
         year: '2018 - 2020',
         link: `https://www.linkedin.com/school/fergusson-college/`
     },
     {
         name: 'Tuljaram Chaturchand College, Baramati',
         img: tc,
-        designation: 'Student',
+        designation: 'BSc',
+        subDesignation: '(Computer Science)',
         year: '2015 - 2017',
         link: `https://www.linkedin.com/school/tuljaram-chaturchand-college-baramati-dist.pune-413102/`
     }
