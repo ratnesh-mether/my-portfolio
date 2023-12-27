@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Contact.scss';
+import Aos from "aos";
+import 'aos/dist/aos.css';
 import { EMAIL_DATA, PHONE_NUMBER, QR } from "../../utilities/Constants";
 function Contact() {
+    useEffect(() => {
+        Aos.init();
+    }, [])
     const composeEmail = () => {
         const mailtoLink = `mailto:${EMAIL_DATA.recipient}?subject=${encodeURIComponent(EMAIL_DATA.subject)}&body=${encodeURIComponent(EMAIL_DATA.body)}`;
         window.open(mailtoLink, '_blank');
@@ -17,7 +22,7 @@ function Contact() {
             <p onClick={handleCall}><span className="icon">&#128222;</span><span className="link" >9922040096</span></p>
         </div>
         <hr />
-        <div className="qr-container">
+        <div className="qr-container" data-aos="flip-up" data-aos-offset='300'>
             <div className="qr-img">
                 <img src={QR} alt="qr-code" />
             </div>

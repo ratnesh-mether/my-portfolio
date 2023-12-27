@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import './Projects.scss'
 import { PROJECTS_DATA } from '../../utilities/Constants';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Projects() {
     const [loadMore, setLoadMore] = useState(true);
@@ -9,6 +11,10 @@ function Projects() {
         return emptyArray;
     });
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     useEffect(() => {
         setScreenSize(getCurrentDimension())
@@ -44,7 +50,7 @@ function Projects() {
     }
 
     const renderProject = (project, projectIndex) => {
-        return <div className="project-info-container" key={project.title}>
+        return <div className="project-info-container" key={project.title} data-aos-offset='270' data-aos="fade-up">
             <a href={project.url} target='_blank' rel="noreferrer">
                 <h2>{project.title} &#128279;</h2>
             </a>
