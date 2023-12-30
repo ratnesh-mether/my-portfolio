@@ -1,10 +1,20 @@
 import { useDispatch } from 'react-redux';
 import './../About/About.scss';
 import { setPdfViewerFlag } from '../../redux-state/slice';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { EMAIL_DATA, INTRODUCTION_PARA_1, INTRODUCTION_PARA_2, INTRODUCTION_PARA_3, PHONE_NUMBER, RESUME_PATH, SKILLS } from '../../utilities/Constants';
 function About() {
     const pdfDownloadRef = useRef(null);
+    const myRef = useRef();
+    const [rocketState, setRocketState] = useState();
+    console.log(rocketState);
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            setRocketState(entries[0].isIntersecting)
+            // console.log(entries[0]);
+        })
+        observer.observe(myRef.current);
+    }, [])
     const dispatch = useDispatch();
     const dispatchHandler = () => {
         dispatch(setPdfViewerFlag(true))
@@ -28,7 +38,9 @@ function About() {
             <div className="profile-image-container"></div>
             <div className="intro-text-links">
                 <div className="me">
-                    <h2><a href="https://www.linkedin.com/in/ratnesh-mether" target='_blank' rel="noreferrer">Ratnesh Mether <span>&#128640;</span></a></h2>
+                    <h2><a href="https://www.linkedin.com/in/ratnesh-mether" target='_blank' rel="noreferrer">Ratnesh Mether
+                        <span ref={myRef} className={`'rocket' ${rocketState ? 'animateRocket' : ''}`}>&#128640;</span>
+                    </a></h2>
                     <p>Frontend Developer</p>
                 </div>
                 <div className="text">
