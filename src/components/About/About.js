@@ -44,7 +44,7 @@ function About() {
             <div className="intro-text-links">
                 <div className="me">
                     <h2><a href="https://www.linkedin.com/in/ratnesh-mether" target='_blank' rel="noreferrer">Ratnesh Mether
-                        <span> &#128640;</span>
+                        <span className='rocket animateRocket'> &nbsp; &#128640;</span>
                     </a></h2>
                     <p>Frontend Developer</p>
                 </div>
