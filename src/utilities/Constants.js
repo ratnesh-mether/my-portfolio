@@ -26,7 +26,7 @@ import vikrant from './../assets/testimonial/vikrant.jpg';
 import fergusson from './../assets/social/fergusson.jpeg';
 import tc from './../assets/social/tcc.png';
 import qr from './../assets/ratneshQR.svg';
-
+import rocket from './../assets/rocket.gif'
 
 
 export const PHONE_NUMBER = '9922040096';
@@ -36,6 +36,8 @@ export const PDF_WORKER_URL = "https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.wo
 export const RESUME_PATH = resume;
 
 export const PROFILE_PICTURE = profilePicture;
+
+export const ROCKET = rocket;
 
 export const QR = qr;
 

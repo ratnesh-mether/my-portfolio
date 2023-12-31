@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import './../About/About.scss';
 import { setPdfViewerFlag } from '../../redux-state/slice';
 import { useEffect, useRef, useState } from 'react';
-import { EMAIL_DATA, INTRODUCTION_PARA_1, INTRODUCTION_PARA_2, INTRODUCTION_PARA_3, PHONE_NUMBER, RESUME_PATH, SKILLS } from '../../utilities/Constants';
+import { EMAIL_DATA, INTRODUCTION_PARA_1, INTRODUCTION_PARA_2, INTRODUCTION_PARA_3, PHONE_NUMBER, RESUME_PATH, ROCKET, SKILLS } from '../../utilities/Constants';
 function About() {
     const pdfDownloadRef = useRef(null);
     const myRef = useRef();
@@ -44,7 +44,8 @@ function About() {
             <div className="intro-text-links">
                 <div className="me">
                     <h2><a href="https://www.linkedin.com/in/ratnesh-mether" target='_blank' rel="noreferrer">Ratnesh Mether
-                        <span className='rocket animateRocket'> &nbsp; &#128640;</span>
+                        {/* <span className='rocket animateRocket'> &nbsp; &#128640;</span> */}
+                        <img className='rocket animateRocket' src={ROCKET} alt="rocket" />
                     </a></h2>
                     <p>Frontend Developer</p>
                 </div>
