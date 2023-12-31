@@ -2,6 +2,7 @@
 .experiance-component {
     .parent-table {
         @include flex-box(normal, normal, column);
+        overflow: hidden;
         row-gap: 24px;
     }
     .experiance {
