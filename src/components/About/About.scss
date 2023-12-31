@@ -38,7 +38,7 @@
             // display: inline-block;
             position: relative;
             top: -4px;
-            width: 50px;
+            width: 40px;
             animation-duration: 5s;
             animation-name: animate-rocket;
             margin-left: 16px;
@@ -284,6 +284,13 @@
 @media (width <= 640px) {
     .about-component {
         row-gap: 28px;
+        .me {
+            .rocket {
+                width: 24px;
+                top: 0;
+                margin-left: 8px;
+            }
+        }
         .profile-cover {
             height: 200px;
         }
