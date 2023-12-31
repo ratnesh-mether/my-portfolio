@@ -1,10 +1,25 @@
 import { useDispatch } from 'react-redux';
 import './../About/About.scss';
 import { setPdfViewerFlag } from '../../redux-state/slice';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { EMAIL_DATA, INTRODUCTION_PARA_1, INTRODUCTION_PARA_2, INTRODUCTION_PARA_3, PHONE_NUMBER, RESUME_PATH, SKILLS } from '../../utilities/Constants';
 function About() {
     const pdfDownloadRef = useRef(null);
+    const myRef = useRef();
+    const [skillsAnimation, setSkillsAnimation] = useState();
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            if (entry.isIntersecting) {
+                setSkillsAnimation(true)
+            }
+            else {
+                setSkillsAnimation(false)
+            }
+            // })
+        })
+        observer.observe(myRef.current);
+    }, [])
     const dispatch = useDispatch();
     const dispatchHandler = () => {
         dispatch(setPdfViewerFlag(true))
@@ -19,7 +34,7 @@ function About() {
     const showSkills = () => {
         const skills = Object.entries(SKILLS);
         return skills.map(([key, skill]) => {
-            return <div className="skill" key={key}><div className='tag'><p>{skill.name}</p></div><img src={skill.logo} alt="react" /></div>
+            return <div className={`skill ${skillsAnimation ? 'show' : 'hide'}`} key={key}><div className='tag'><p>{skill.name}</p></div><img src={skill.logo} alt="react" /></div>
         })
     }
     return <main className='about-component'>
@@ -28,7 +43,9 @@ function About() {
             <div className="profile-image-container"></div>
             <div className="intro-text-links">
                 <div className="me">
-                    <h2><a href="https://www.linkedin.com/in/ratnesh-mether" target='_blank' rel="noreferrer">Ratnesh Mether <span>&#128640;</span></a></h2>
+                    <h2><a href="https://www.linkedin.com/in/ratnesh-mether" target='_blank' rel="noreferrer">Ratnesh Mether
+                        <span> &#128640;</span>
+                    </a></h2>
                     <p>Frontend Developer</p>
                 </div>
                 <div className="text">
@@ -46,7 +63,7 @@ function About() {
                 </div>
             </div>
         </div>
-        <div className="skills-section">
+        <div className='skills-section' ref={myRef}>
             {showSkills()}
         </div>
     </main>
