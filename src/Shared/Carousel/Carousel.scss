@@ -11,6 +11,7 @@
 .carousel-inner {
     display: flex;
     align-items: center;
+    overflow: visible !important;
 }
 @media (width <= 640px) {
     .carousel-control-next,
