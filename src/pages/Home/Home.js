@@ -12,6 +12,8 @@ import Contact from '../../components/Contact/Contact';
 function Home() {
     const dispatch = useDispatch();
     const pdfViewerFlag = useSelector(state => state.slice.pdfViewerFlag)
+    const darkModeFlag = useSelector(state => state.slice.darkModeFlag)
+
     const dispatchHandler = () => {
         dispatch(setPdfViewerFlag(false))
     }
@@ -25,7 +27,7 @@ function Home() {
             </div>
         }
     }
-    return <main className="home-component">
+    return <main className={"home-component " + (darkModeFlag ? 'dark-mode-home' : '')}>
         {handlePDFView()}
         <div style={{ visibility: 'hidden', height: 0, position: 'relative', top: -32 }} id="home"></div>
         <section className="base about-section" >

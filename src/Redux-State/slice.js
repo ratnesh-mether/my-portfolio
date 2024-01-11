@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    pdfViewerFlag: false
+    pdfViewerFlag: false,
+    darkModeFlag: true
 }
 export const slice = createSlice({
     name: "Slice",
@@ -9,10 +10,13 @@ export const slice = createSlice({
     reducers: {
         setPdfViewerFlag: (state, action) => {
             state.pdfViewerFlag = action.payload;
+        },
+        setDarkThemeFlag: (state, action) => {
+            state.darkModeFlag = action.payload;
         }
     },
 });
 
-export const { pdfViewerFlag, setPdfViewerFlag } = slice.actions;
+export const { pdfViewerFlag, setPdfViewerFlag, darkModeFlag, setDarkThemeFlag } = slice.actions;
 
 export default slice.reducer;

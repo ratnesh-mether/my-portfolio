@@ -127,6 +127,28 @@
         font-weight: 500;
     }
 }
+.dark-mode-project {
+    .project-info-container {
+        h2 {
+            color: #24ff00 !important;
+        }
+    }
+    .project {
+        background: transparent;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1),
+            0px 0px 5px 2px rgb(255 255 255);
+        .info-text {
+            color: #fff;
+        }
+    }
+    .project-info-container:nth-of-type(2n) {
+        .project {
+            background: transparent;
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1),
+                0px 0px 5px 2px rgb(255 255 255);
+        }
+    }
+}
 @media (width <= 1280px) {
     .projects-component {
         .project {

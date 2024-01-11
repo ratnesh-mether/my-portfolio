@@ -6,13 +6,12 @@ import { TESTIMONIALS } from '../../utilities/Constants';
 
 function ControlledCarousel() {
     const [index, setIndex] = useState(0);
-
     const handleSelect = (selectedIndex) => {
         setIndex(selectedIndex);
     };
     const showTestimonal = () => {
         return TESTIMONIALS.map((testimonial) => {
-            return <Carousel.Item key={testimonial.name}>
+            return <Carousel.Item key={testimonial.name} >
                 <div className="info-card">
                     <div className="meta">
                         <a className="personal-info" href={testimonial.profileURL} target='_blank' rel='noreferrer'>

@@ -3,6 +3,7 @@ import './Projects.scss'
 import { PROJECTS_DATA } from '../../utilities/Constants';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useSelector } from "react-redux";
 
 function Projects() {
     const [loadMore, setLoadMore] = useState(true);
@@ -11,6 +12,7 @@ function Projects() {
         return emptyArray;
     });
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
+    const darkModeFlag = useSelector(state => state.slice.darkModeFlag)
 
     useEffect(() => {
         AOS.init();
@@ -88,7 +90,7 @@ function Projects() {
                 return renderProject(project, index);
             })
     }
-    return <main className='projects-component'>
+    return <main className={'projects-component ' + (darkModeFlag ? 'dark-mode-project' : '')}>
         {projectList()}
         {loadMore ?
             <p onClick={loadMoreHandler} className="more-project">Show More Projects</p> :
