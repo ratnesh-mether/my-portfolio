@@ -3,7 +3,9 @@ import './Contact.scss';
 import Aos from "aos";
 import 'aos/dist/aos.css';
 import { EMAIL_DATA, PHONE_NUMBER, QR } from "../../utilities/Constants";
+import { useSelector } from "react-redux";
 function Contact() {
+    const darkModeFlag = useSelector(state => state.slice.darkModeFlag)
     useEffect(() => {
         Aos.init();
     }, [])
@@ -14,7 +16,7 @@ function Contact() {
     const handleCall = () => {
         window.location.href = `tel:${PHONE_NUMBER}`;
     };
-    return <main className="contact-component">
+    return <main className={"contact-component " + (darkModeFlag ? "dark-mode-contact" : "")}>
         <div className="text-container">
             <p className="name"><span className="icon">&#128126;</span>Ratnesh Shashikant Mether</p>
             <p className="designation"><span className="icon">&#128187;</span>Frontend Developer</p>
@@ -22,7 +24,8 @@ function Contact() {
             <p onClick={handleCall}><span className="icon">&#128222;</span><span className="link" >9922040096</span></p>
         </div>
         <hr />
-        <div className="qr-container" data-aos="flip-up" data-aos-offset='300'>
+        {/* data-aos="flip-up" data-aos-offset='200' */}
+        <div className="qr-container" >
             <div className="qr-img">
                 <img src={QR} alt="qr-code" />
             </div>

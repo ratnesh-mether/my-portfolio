@@ -34,24 +34,12 @@
         }
     }
     .welcome-section {
-        background-color: #fff;
+        // background-color: #fff;
         @include flex-box(center, center, row);
     }
     .about-section {
-        background-color: #fff;
+        // background-color: #fff;
         padding-top: 32px;
-    }
-    .project-section {
-        background-color: #fff;
-    }
-    .education-section {
-        background-color: #fff;
-    }
-    .contact-section {
-        background-color: #fff;
-    }
-    .outro-section {
-        background-color: #fff;
     }
     q {
         text-align: center;
@@ -69,7 +57,17 @@
         }
     }
 }
-
+.dark-mode-home {
+    .headings {
+        color: #fff;
+    }
+    q {
+        color: #fff;
+    }
+    .thanks {
+        color: #ffc107;
+    }
+}
 @media (width <= 1280px) {
     .home-component {
         .base {

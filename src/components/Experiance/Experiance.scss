@@ -63,6 +63,19 @@
         }
     }
 }
+.dark-mode-experiance {
+    color: #fff;
+    .logo {
+        background-color: #fff;
+    }
+    .experiance:hover {
+        background: linear-gradient(
+            109.6deg,
+            rgb(43, 1, 91) 13.4%,
+            rgb(122, 2, 54) 100.2%
+        ) !important;
+    }
+}
 @media (width <= 640px) {
     .experiance-component {
         .designation,

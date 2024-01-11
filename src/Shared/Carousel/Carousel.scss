@@ -8,6 +8,23 @@
     background-color: #bae2f8;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px -2px rgb(0, 0, 0);
 }
+.dark-mode-carousel {
+    .carousel {
+        background: transparent;
+    }
+    .info-card {
+        color: #fff;
+        .designation {
+            color: #24ff00;
+        }
+
+        .org-img {
+            background: #fff;
+        }
+    }
+
+    // background: red;
+}
 .carousel-inner {
     display: flex;
     align-items: center;

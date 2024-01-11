@@ -3,8 +3,11 @@ import './Experiance.scss'
 import { EXPERIANCE } from "../../utilities/Constants";
 import Aos from "aos";
 import 'aos/dist/aos.css';
+import { useSelector } from "react-redux";
 
 function Experiance() {
+    const darkModeFlag = useSelector(state => state.slice.darkModeFlag)
+
     useEffect(() => {
         Aos.init();
     }, [])
@@ -31,7 +34,7 @@ function Experiance() {
             </div>
         })
     }
-    return <main className="experiance-component">
+    return <main className={"experiance-component " + (darkModeFlag ? 'dark-mode-experiance' : '')}>
         <div className="parent-table">
             {showExperiance()}
         </div>

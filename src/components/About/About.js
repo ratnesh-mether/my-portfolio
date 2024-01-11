@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './../About/About.scss';
 import { setPdfViewerFlag } from '../../redux-state/slice';
 import { useEffect, useRef, useState } from 'react';
@@ -6,6 +6,7 @@ import { EMAIL_DATA, INTRODUCTION_PARA_1, INTRODUCTION_PARA_2, INTRODUCTION_PARA
 function About() {
     const pdfDownloadRef = useRef(null);
     const myRef = useRef();
+    const darkModeFlag = useSelector(state => state.slice.darkModeFlag);
     const [skillsAnimation, setSkillsAnimation] = useState();
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -37,7 +38,7 @@ function About() {
             return <div className={`skill ${skillsAnimation ? 'show' : 'hide'}`} key={key}><div className='tag'><p>{skill.name}</p></div><img src={skill.logo} alt="react" /></div>
         })
     }
-    return <main className='about-component'>
+    return <main className={'about-component ' + (darkModeFlag ? 'dark-mode-about ' : '')}>
         <div className="intro-section">
             <div className="profile-cover"></div>
             <div className="profile-image-container"></div>
