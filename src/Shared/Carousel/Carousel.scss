@@ -1,7 +1,7 @@
 .carousel {
     background-color: #fff;
     height: auto;
-    padding: 24px 0 56px;
+    padding: 64px 0 90px;
     display: flex;
     align-items: center;
     border-radius: 8px;
@@ -22,9 +22,12 @@
             background: #fff;
         }
     }
-
-    // background: red;
 }
+
+.carousel-indicators {
+    bottom: 16px !important;
+}
+
 .carousel-inner {
     display: flex;
     align-items: center;

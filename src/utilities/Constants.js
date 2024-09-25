@@ -26,7 +26,8 @@ import vikrant from './../assets/testimonial/vikrant.jpg';
 import fergusson from './../assets/social/fergusson.jpeg';
 import tc from './../assets/social/tcc.png';
 import qr from './../assets/ratneshQR.svg';
-import rocket from './../assets/rocket.gif'
+import rocket from './../assets/rocket.gif';
+import silverdoor from './../assets/SilverDoor-logo.svg'
 
 
 export const PHONE_NUMBER = '9922040096';
@@ -247,11 +248,19 @@ and is always willing to go the extra mile to ensure the success of the project.
 
 export const EXPERIANCE = [
     {
+        name: 'SilverDoor',
+        img: silverdoor,
+        designation: 'Frontend Developer',
+        subDesignation: '',
+        year: 'March 2024 - Present',
+        link: `https://www.linkedin.com/company/silverdoor-international-serviced-apartments/`
+    },
+    {
         name: 'Electrum(formerly PickMySolar)',
         img: 'https://assets.solar.com/partner_assets/electrum/electrum-logo.svg',
         designation: 'Frontend Developer',
         subDesignation: '',
-        year: '2021 - Present',
+        year: 'JUNE 2021 - November 2023',
         link: `https://www.linkedin.com/company/pickmysolar/mycompany/`
     },
     {
