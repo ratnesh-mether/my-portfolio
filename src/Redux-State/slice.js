@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     pdfViewerFlag: false,
-    darkModeFlag: true
+    darkModeFlag: false
 }
 export const slice = createSlice({
     name: "Slice",
